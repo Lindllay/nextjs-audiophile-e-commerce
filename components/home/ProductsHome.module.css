@@ -1,0 +1,112 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 4.8rem;
+	margin-bottom: 20rem;
+}
+
+.zx9-container {
+	background-color: var(--color-raw-sienna);
+	display: flex;
+	height: 56rem;
+	overflow: hidden;
+	justify-content: space-evenly;
+	position: relative;
+	border-radius: 0.8rem;
+}
+
+.figure {
+	margin-top: 13.5rem;
+	z-index: 2;
+}
+
+.figure img {
+	width: 36rem;
+}
+
+.circles {
+	position: absolute;
+	top: -5rem;
+	left: -15rem;
+	z-index: 1;
+	width: 80%;
+}
+
+.zx9-container div {
+	max-width: 30%;
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	align-items: flex-start;
+}
+
+.heading-1 {
+	font-size: 5.6rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	line-height: 5.8rem;
+	color: var(--color-light-grey);
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	margin-bottom: 1.6rem;
+	color: var(--color-white-75);
+}
+
+.zx7-container {
+	background-image: url(../../public/assets/home/desktop/image-speaker-zx7.jpg);
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	height: 32rem;
+	display: flex;
+	align-items: center;
+	border-radius: 0.8rem;
+}
+
+.zx7-container div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 3.2rem;
+	margin-left: 9.5rem;
+}
+
+.heading-4 {
+	font-size: 2.8rem;
+	font-weight: 600;
+	letter-spacing: 1.15px;
+	line-height: 3.6rem;
+}
+
+.yx1-container {
+	height: 32rem;
+	display: flex;
+	gap: 3rem;
+}
+
+.yx1-container figure {
+	flex-basis: 50%;
+	background-image: url(../../public/assets/home/desktop/image-earphones-yx1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0.8rem;
+}
+
+.yx1-container div {
+	flex: 1;
+	background-color: var(--color-grey);
+	border-radius: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 7.5rem;
+	gap: 3.2rem;
+}

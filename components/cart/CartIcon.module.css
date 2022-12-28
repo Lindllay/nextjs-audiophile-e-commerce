@@ -1,0 +1,10 @@
+.icon {
+	cursor: pointer;
+	transition: all 0.2s;
+	stroke: transparent;
+	fill: white;
+}
+
+.icon:hover {
+	fill: var(--color-raw-sienna);
+}

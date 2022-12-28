@@ -1,0 +1,39 @@
+.category {
+	width: 35rem;
+	height: 20rem;
+	background-color: var(--color-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+
+	position: relative;
+	gap: 1.5rem;
+}
+
+.category button {
+	margin-bottom: 2.4rem;
+}
+
+.figure {
+	position: absolute;
+	left: 50%;
+	translate: -50%;
+	bottom: 5rem;
+}
+
+.figure img {
+	width: 25rem;
+	transition: all 0.2s;
+}
+
+.category:hover figure img {
+	width: 27rem;
+}
+
+.heading-6 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 1.29px;
+	line-height: 2.4rem;
+}

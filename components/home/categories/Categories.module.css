@@ -1,0 +1,7 @@
+.categories {
+	padding: 20rem 0 16.8rem 0;
+
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
+}

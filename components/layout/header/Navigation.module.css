@@ -1,0 +1,21 @@
+.nav-items {
+	display: flex;
+	gap: 3.4rem;
+	text-decoration: none;
+	margin-right: 6.4rem;
+}
+
+.nav-item {
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #ffffff;
+	transition: all 0.2s;
+}
+
+.nav-item:hover {
+	color: var(--color-raw-sienna);
+}
