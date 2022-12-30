@@ -2,6 +2,7 @@ import styles from "./Header.module.css";
 import Navigation from "./Navigation";
 import CartIcon from "../../cart/CartIcon";
 import Wrapper from "../Wrapper";
+import { useRouter } from "next/router";
 
 const Header = (props) => {
 	return (

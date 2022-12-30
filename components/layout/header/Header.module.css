@@ -1,6 +1,7 @@
 .header {
 	z-index: 9;
 	width: 100%;
+	/* background-color: var(--color-black-background); */
 }
 
 .wrapper-header {
