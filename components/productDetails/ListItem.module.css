@@ -1,0 +1,13 @@
+.item-box {
+	display: flex;
+	gap: 2.4rem;
+
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.quantity {
+	color: var(--color-raw-sienna);
+	font-weight: 600;
+}

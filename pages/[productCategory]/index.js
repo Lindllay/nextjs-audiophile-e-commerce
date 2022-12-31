@@ -10,12 +10,13 @@ import path from "path";
 const CategoryPage = (props) => {
 	const { data, category } = props;
 	const sortedData = data.sort((x) => (x.new ? -1 : 1));
+	const isDetail = false;
 
 	return (
 		<>
 			<CategoryHeader category={category} />
 			<Content>
-				<Products data={sortedData} />
+				<Products data={sortedData} isDetail={isDetail} />
 				<Categories />
 				<Gear />
 			</Content>

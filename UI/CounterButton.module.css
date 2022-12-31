@@ -1,0 +1,25 @@
+.box {
+	display: flex;
+	align-items: center;
+	background-color: var(--color-grey);
+}
+
+.box > div {
+	padding: 1.5rem;
+}
+
+.symbol {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+.symbol:hover {
+	color: var(--color-raw-sienna);
+}
+
+.counter {
+	font-size: 1.3rem;
+	font-weight: 600;
+}
