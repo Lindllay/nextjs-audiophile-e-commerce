@@ -7,7 +7,7 @@ const Products = (props) => {
 			<ul className={styles.items}>
 				{props.data.map((product) => (
 					<Product
-						image={product.categoryImage}
+						image={product.image}
 						description={product.description}
 						id={product.id}
 						key={product.id}

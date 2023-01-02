@@ -17,7 +17,7 @@ const Gear = (props) => {
 				</p>
 			</div>
 			<figure className={styles.figure}>
-				<img src="assets/shared/desktop/image-best-gear.jpg" alt="gearImg" />
+				<img src="/assets/shared/desktop/image-best-gear.jpg" alt="gearImg" />
 			</figure>
 		</section>
 	);

@@ -26,9 +26,6 @@
 	line-height: 2.5rem;
 	color: rgba(0, 0, 0, 0.5);
 }
-.paragraph:not(:last-child) {
-	margin-bottom: 2.4rem;
-}
 
 .list {
 	display: flex;

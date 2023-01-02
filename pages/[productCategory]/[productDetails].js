@@ -2,37 +2,73 @@ import Product from "../../components/productCategory/Product";
 import Content from "../../components/layout/Content";
 import Features from "../../components/productDetails/Features";
 import Gallery from "../../components/productDetails/Gallery";
+import Others from "../../components/productDetails/Others";
 import Categories from "../../components/home/categories/Categories";
 import Gear from "../../components/layout/gear/Gear";
 
+import fsPromises from "fs/promises";
+import path from "path";
+
 const DetailsPage = (props) => {
+	const data = props.productDetails[0];
+	console.log(data);
+
 	return (
 		<>
 			<div className="header-background"></div>
 			<Content>
 				<Product
 					margin={true}
-					image={{
-						desktop:
-							"http://localhost:3000/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg",
-					}}
-					description={
-						"The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
-					}
-					id={1}
-					key={1}
-					name="XX99 MARK II HEADPHONES"
-					new={true}
-					price={123}
+					image={data.image}
+					description={data.description}
+					id={data.id}
+					key={data.id}
+					name={data.name}
+					new={data.new}
+					price={data.price}
 					isDetail={true}
 				></Product>
-				<Features />
+				<Features features={data.features} includes={data.includes} />
 				<Gallery />
+				<Others />
 				<Categories />
 				<Gear />
 			</Content>
 		</>
 	);
 };
+
+export async function getStaticProps(context) {
+	const filePath = path.join(process.cwd(), "data.json");
+	const data = await fsPromises.readFile(filePath);
+	const objectData = JSON.parse(data);
+
+	const query = context.params.productDetails;
+	const productData = objectData.filter((product) => product.slug === query);
+
+	return {
+		props: {
+			productDetails: productData,
+		},
+	};
+}
+
+export async function getStaticPaths() {
+	const filePath = path.join(process.cwd(), "data.json");
+	const data = await fsPromises.readFile(filePath);
+	const objectData = JSON.parse(data);
+
+	const pathsArray = objectData.map((product) => ({
+		params: {
+			productCategory: product.category,
+			productDetails: product.slug,
+		},
+	}));
+
+	return {
+		fallback: false,
+		paths: pathsArray,
+	};
+}
 
 export default DetailsPage;

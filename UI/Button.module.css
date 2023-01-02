@@ -15,7 +15,7 @@
 	padding: 1.5rem 3rem;
 	background-color: var(--color-raw-sienna);
 	color: var(--color-light-grey);
-	align-self: flex-start;
+	/* align-self: flex-start; */
 }
 
 .btn--1:hover,

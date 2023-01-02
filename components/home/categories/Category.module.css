@@ -2,6 +2,7 @@
 	width: 35rem;
 	height: 20rem;
 	background-color: var(--color-grey);
+	border-radius: 0.8rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;

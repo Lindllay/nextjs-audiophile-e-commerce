@@ -5,15 +5,15 @@ const Categories = (props) => {
 	return (
 		<section className={styles.categories}>
 			<Category
-				image="assets/shared/desktop/image-category-thumbnail-speakers.png"
+				image="/assets/shared/desktop/image-category-thumbnail-speakers.png"
 				categoryName="Headphones"
 			/>
 			<Category
-				image="assets/shared/desktop/image-category-thumbnail-headphones.png"
+				image="/assets/shared/desktop/image-category-thumbnail-headphones.png"
 				categoryName="Speakers"
 			/>
 			<Category
-				image="assets/shared/desktop/image-category-thumbnail-earphones.png"
+				image="/assets/shared/desktop/image-category-thumbnail-earphones.png"
 				categoryName="Earphones"
 			/>
 		</section>
