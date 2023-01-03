@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: "Manrope", sans-serif;
+}
+
+body {
+	background-color: var(--color-light-grey);
+}
+
+/* Typography */
+
+[class*="heading"] {
+	text-transform: uppercase;
+}
+
+.heading-1 {
+	font-size: 5.6rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	line-height: 5.8rem;
+	color: var(--color-light-grey);
+}
+
+.heading-2 {
+	font-size: 4rem;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	line-height: 4.4rem;
+}
+
+.heading-3 {
+	font-size: 3.2rem;
+	font-weight: 600;
+	letter-spacing: 1.15px;
+	line-height: 3.6rem;
+}
+
+.heading-4 {
+	font-size: 2.8rem;
+	font-weight: 600;
+	letter-spacing: 1.15px;
+	line-height: 3.6rem;
+}
+
+.heading-5 {
+	font-size: 2.4rem;
+	font-weight: 600;
+	letter-spacing: 1.7px;
+	line-height: 3.3rem;
+}
+
+.heading-6 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 3px;
+	line-height: 2.4rem;
+}
+
+.overline {
+	font-size: 1.4rem;
+	font-weight: 400;
+	letter-spacing: 10px;
+	line-height: 1.9rem;
+	text-transform: uppercase;
+	color: var(--color-white-50);
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+}
+
+.subtitle {
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+/* Colors */
+
+:root {
+	--color-light-grey: #fafafa;
+	--color-grey: #f1f1f1;
+	--color-raw-sienna: #d87d4a;
+	--color-tacao: #fbaf85;
+	--color-black: #101010;
+	--color-black-background: #141414;
+	--color-grey-border: #96969633;
+	--color-white-50: rgb(125, 125, 125);
+	--color-white-75: rgba(255, 255, 255, 0.75);
+	--color-grey-button: #4c4c4c;
+	--section-block-margin: 16rem;
+}
+
+.font-white75 {
+	color: var(--color-white-75);
+}
+
+.header-background {
+	height: 9.7rem;
+	margin-top: -9.6rem;
+	background-color: var(--color-black-background);
+}
+
+.block-margin-large {
+	margin-block: 16rem;
+}

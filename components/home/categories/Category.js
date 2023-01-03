@@ -1,9 +1,10 @@
 import styles from "./Category.module.css";
 import Button from "../../../UI/Button";
+import Link from "next/link";
 
 const Category = (props) => {
 	return (
-		<div className={styles.category}>
+		<Link className={styles.category} href={`/${props.categoryName}`}>
 			<figure className={styles.figure}>
 				<img src={props.image} alt="thumbnail" />
 			</figure>
@@ -12,7 +13,7 @@ const Category = (props) => {
 				Shop
 				<img src="/assets/shared/desktop/icon-arrow-right.svg" />
 			</Button>
-		</div>
+		</Link>
 	);
 };
 

@@ -20,3 +20,8 @@
 	line-height: 3.3rem;
 	margin-bottom: 2.8rem;
 }
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}

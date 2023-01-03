@@ -10,6 +10,9 @@
 
 	position: relative;
 	gap: 1.5rem;
+
+	text-decoration: none;
+	color: inherit;
 }
 
 .category button {

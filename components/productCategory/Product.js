@@ -1,6 +1,8 @@
 import styles from "./Product.module.css";
 import Button from "../../UI/Button";
 import CounterButton from "../../UI/CounterButton";
+import respond from "../../config";
+import Link from "next/link";
 
 const Product = (props) => {
 	const refractoredImgSrc = {
@@ -14,9 +16,12 @@ const Product = (props) => {
 			className={`${styles.item} ${props.margin ? "block-margin-large" : ""}`}
 		>
 			<picture className={styles.picture}>
-				<source media="(max-width: 499px)" srcSet={refractoredImgSrc.mobile} />
 				<source
-					media="(min-width: 500px) and (max-width: 1024px)"
+					media={`(max-width: ${respond.mobile})`}
+					srcSet={refractoredImgSrc.mobile}
+				/>
+				<source
+					media={`(max-width: ${respond.tablet})`}
 					srcSet={refractoredImgSrc.tablet}
 				/>
 
@@ -31,7 +36,14 @@ const Product = (props) => {
 						"en-US"
 					)}`}</p>
 				)}
-				{!props.isDetail && <Button className="btn--1">See Product</Button>}
+				{!props.isDetail && (
+					<Link
+						href={`/${props.category}/${props.slug}`}
+						className={styles.link}
+					>
+						<Button className="btn--1">See Product</Button>
+					</Link>
+				)}
 				{props.isDetail && (
 					<div className={styles.actions}>
 						<CounterButton />

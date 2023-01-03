@@ -64,3 +64,8 @@
 	display: flex;
 	gap: 1.6rem;
 }
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}

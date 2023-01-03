@@ -1,17 +1,36 @@
 import styles from "./OthersItem.module.css";
 import Button from "../../UI/Button";
+import respond from "../../config";
+import Link from "next/link";
 
 const OthersItem = (props) => {
+	const refractoredImgSrc = {
+		mobile: props.image.mobile.replace(".", ""),
+		tablet: props.image.tablet.replace(".", ""),
+		desktop: props.image.desktop.replace(".", ""),
+	};
+
 	return (
 		<li className={styles.item}>
-			<figure className={styles["img-box"]}>
-				<img
-					src="/assets/shared/desktop/image-xx99-mark-two-headphones.jpg"
-					alt="img"
+			<picture className={styles["img-box"]}>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet={refractoredImgSrc.mobile}
+					alt="product-image"
 				/>
-			</figure>
-			<h5 className={styles["heading-5"]}>XX99 Mark</h5>
-			<Button className="btn--1">See product</Button>
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet={refractoredImgSrc.tablet}
+					alt="product-image"
+				/>
+				<img src={refractoredImgSrc.desktop} alt="product-image" />
+			</picture>
+			<h5 className={styles["heading-5"]}>{props.name}</h5>
+			<Button className="btn--1">
+				<Link href={`/${props.category}/${props.slug}`} className={styles.link}>
+					See product
+				</Link>
+			</Button>
 		</li>
 	);
 };

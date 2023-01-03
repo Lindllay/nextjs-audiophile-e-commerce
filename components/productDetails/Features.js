@@ -2,8 +2,8 @@ import styles from "./Features.module.css";
 import ListItem from "./ListItem";
 
 const Features = (props) => {
-	const includes = props.includes.map((item) => (
-		<ListItem quantity={item.quantity} item={item.item} />
+	const includes = props.includes.map((item, index) => (
+		<ListItem quantity={item.quantity} item={item.item} key={index} />
 	));
 
 	return (

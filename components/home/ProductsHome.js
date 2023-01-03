@@ -1,4 +1,5 @@
 import styles from "./ProductsHome.module.css";
+import Link from "next/link";
 
 import Button from "../../UI/Button";
 
@@ -20,20 +21,33 @@ const ProductsHome = (props) => {
 						Upgrade to premium speakers that are phenomenally built to deliver
 						truly remarkable sound.
 					</p>
-					<Button className="btn--3">See product</Button>
+
+					<Button className="btn--3">
+						<Link href={"/speakers/zx9-speaker"} className={styles.link}>
+							See product
+						</Link>
+					</Button>
 				</div>
 			</div>
 			<div className={styles["zx7-container"]}>
 				<div>
 					<h4 className={styles["heading-4"]}>ZX7 Speaker</h4>
-					<Button className="btn--2">See product</Button>
+					<Button className="btn--2">
+						<Link href={"/speakers/zx7-speaker"} className={styles.link}>
+							See product
+						</Link>
+					</Button>
 				</div>
 			</div>
 			<div className={styles["yx1-container"]}>
 				<figure></figure>
 				<div>
 					<h4 className={styles["heading-4"]}>YX1 Earphones</h4>
-					<Button className="btn--2">See product</Button>
+					<Button className="btn--2">
+						<Link href={"/earphones/yx1-earphones"} className={styles.link}>
+							See product
+						</Link>
+					</Button>
 				</div>
 			</div>
 		</section>

@@ -1,26 +1,79 @@
 import styles from "./Gallery.module.css";
+import respond from "../../config";
 
 const Gallery = (props) => {
+	let refractoredImgSrc = {};
+	for (const key in props.gallery) {
+		const img = {
+			[key]: {
+				mobile: props.gallery[key].mobile.replace(".", ""),
+				tablet: props.gallery[key].tablet.replace(".", ""),
+				desktop: props.gallery[key].desktop.replace(".", ""),
+			},
+		};
+		refractoredImgSrc = { ...refractoredImgSrc, ...img };
+	}
+	// console.log(refractoredImgSrc);
+
+	// const refractoredImgSrc = {
+	// 	first: {
+	// 		mobile: props.gallery.first.mobile.replace(".", ""),
+	// 		tablet: props.gallery.first.tablet.replace(".", ""),
+	// 		desktop: props.gallery.first.desktop.replace(".", ""),
+	// 	},
+	// 	second: {
+	// 		mobile: props.gallery.first.mobile.replace(".", ""),
+	// 		tablet: props.gallery.first.tablet.replace(".", ""),
+	// 		desktop: props.gallery.first.desktop.replace(".", ""),
+	// 	},
+	// 	third: {
+	// 		mobile: props.gallery.first.mobile.replace(".", ""),
+	// 		tablet: props.gallery.first.tablet.replace(".", ""),
+	// 		desktop: props.gallery.first.desktop.replace(".", ""),
+	// 	},
+	// };
+
 	return (
 		<section className={styles.gallery}>
-			<figure className={`${styles["img-box"]} ${styles["img-1"]}`}>
-				<img
-					src="http://localhost:3000/assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg"
-					alt=""
+			<picture className={`${styles["img-box"]} ${styles["img-1"]}`}>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet={refractoredImgSrc.first.mobile}
+					alt={props.name}
 				/>
-			</figure>
-			<figure className={`${styles["img-box"]} ${styles["img-2"]}`}>
-				<img
-					src="http://localhost:3000/assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg"
-					alt=""
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet={refractoredImgSrc.first.tablet}
+					alt={props.name}
 				/>
-			</figure>
-			<figure className={`${styles["img-box"]} ${styles["img-3"]}`}>
-				<img
-					src="http://localhost:3000/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg"
-					alt=""
+				<img src={refractoredImgSrc.first.desktop} alt={props.name} />
+			</picture>
+			<picture className={`${styles["img-box"]} ${styles["img-2"]}`}>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet={refractoredImgSrc.second.mobile}
+					alt={props.name}
 				/>
-			</figure>
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet={refractoredImgSrc.second.tablet}
+					alt={props.name}
+				/>
+				<img src={refractoredImgSrc.second.desktop} alt={props.name} />
+			</picture>
+			<picture className={`${styles["img-box"]} ${styles["img-3"]}`}>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet={refractoredImgSrc.third.mobile}
+					alt={props.name}
+				/>
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet={refractoredImgSrc.third.tablet}
+					alt={props.name}
+				/>
+				<img src={refractoredImgSrc.third.desktop} alt={props.name} />
+			</picture>
 		</section>
 	);
 };

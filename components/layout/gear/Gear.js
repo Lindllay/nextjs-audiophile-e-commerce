@@ -1,4 +1,5 @@
 import styles from "./Gear.module.css";
+import respond from "../../../config";
 
 const Gear = (props) => {
 	return (
@@ -16,9 +17,19 @@ const Gear = (props) => {
 					best place to buy your portable audio equipment.
 				</p>
 			</div>
-			<figure className={styles.figure}>
+			<picture className={styles.picture}>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet="/assets/shared/mobile/image-best-gear.jpg"
+					alt="gearImg"
+				/>
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet="/assets/shared/tablet/image-best-gear.jpg"
+					alt="gearImg"
+				/>
 				<img src="/assets/shared/desktop/image-best-gear.jpg" alt="gearImg" />
-			</figure>
+			</picture>
 		</section>
 	);
 };

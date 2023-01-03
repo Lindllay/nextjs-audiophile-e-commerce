@@ -110,3 +110,8 @@
 	padding-left: 7.5rem;
 	gap: 3.2rem;
 }
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}

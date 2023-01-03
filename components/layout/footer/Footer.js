@@ -1,5 +1,6 @@
-import styles from "./Footer.module.css";
+import styles from "./Footer.module.scss";
 import Wrapper from "../Wrapper";
+import respond from "../../../config";
 
 import Link from "next/link";
 
@@ -24,10 +25,12 @@ const Footer = (props) => {
 					</p>
 					<nav className={styles.navigation}>
 						<ul className={styles.links}>
-							<Link href={""}>Home</Link>
-							<Link href={""}>Headphones</Link>
-							<Link href={""}>Speakers</Link>
-							<Link href={""}>Earphones</Link>
+							<Link href={"/"} className={styles["nav-item"]}>
+								Home
+							</Link>
+							<Link href={"/headphones"}>Headphones</Link>
+							<Link href={"/speakers"}>Speakers</Link>
+							<Link href={"/earphones"}>Earphones</Link>
 						</ul>
 					</nav>
 					<div className={styles.icons}>

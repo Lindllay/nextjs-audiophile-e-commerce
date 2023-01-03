@@ -11,7 +11,6 @@ import path from "path";
 
 const DetailsPage = (props) => {
 	const data = props.productDetails[0];
-	console.log(data);
 
 	return (
 		<>
@@ -29,8 +28,8 @@ const DetailsPage = (props) => {
 					isDetail={true}
 				></Product>
 				<Features features={data.features} includes={data.includes} />
-				<Gallery />
-				<Others />
+				<Gallery gallery={data.gallery} name={data.name} />
+				<Others others={data.others} category={data.category} />
 				<Categories />
 				<Gear />
 			</Content>

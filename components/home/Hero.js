@@ -1,15 +1,30 @@
 import styles from "./Hero.module.css";
 import Wrapper from "../../components/layout/Wrapper";
 import Button from "../../UI/Button";
+import respond from "../../config";
+import Link from "next/link";
 
 const Hero = (props) => {
 	return (
 		<section className={styles.hero}>
-			<img
-				src="/assets/home/desktop/image-hero.jpg"
-				alt="hero-background"
-				className={styles.background}
-			/>
+			<picture>
+				<source
+					media={`(max-width: ${respond.mobile})`}
+					srcSet="/assets/home/mobile/image-header.jpg"
+					alt="hero-background"
+				/>
+				<source
+					media={`(max-width: ${respond.tablet})`}
+					srcSet="/assets/home/tablet/image-header.jpg"
+					alt="hero-background"
+				/>
+				<img
+					src="/assets/home/desktop/image-hero.jpg"
+					alt="hero-background"
+					className={styles.background}
+				/>
+			</picture>
+
 			<Wrapper className={styles["wrapper-hero"]}>
 				<div className={styles.content}>
 					<p className="overline">New product</p>
@@ -22,7 +37,10 @@ const Hero = (props) => {
 						<br /> build quality made for the passionate music
 						<br /> enthusiast.
 					</p>
-					<Button className="btn--1">See product</Button>
+
+					<Link href="/headphones/xx99-mark-two-headphones" passHref>
+						<Button className="btn--1">See product</Button>
+					</Link>
 				</div>
 			</Wrapper>
 		</section>

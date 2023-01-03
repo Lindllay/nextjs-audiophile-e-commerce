@@ -15,6 +15,8 @@ const Products = (props) => {
 						new={product.new}
 						price={product.price}
 						isDetail={props.isDetail}
+						category={product.category}
+						slug={product.slug}
 					/>
 				))}
 			</ul>
