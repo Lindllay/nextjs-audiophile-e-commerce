@@ -10,6 +10,11 @@ const OthersItem = (props) => {
 		desktop: props.image.desktop.replace(".", ""),
 	};
 
+	const getCategory = props.slug.split("-").pop();
+	const othersCategory = getCategory.endsWith("s")
+		? getCategory
+		: getCategory + "s";
+
 	return (
 		<li className={styles.item}>
 			<picture className={styles["img-box"]}>
@@ -27,7 +32,7 @@ const OthersItem = (props) => {
 			</picture>
 			<h5 className={styles["heading-5"]}>{props.name}</h5>
 			<Button className="btn--1">
-				<Link href={`/${props.category}/${props.slug}`} className={styles.link}>
+				<Link href={`/${othersCategory}/${props.slug}`} className={styles.link}>
 					See product
 				</Link>
 			</Button>
