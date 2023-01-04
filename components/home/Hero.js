@@ -2,7 +2,7 @@ import styles from "./Hero.module.css";
 import Wrapper from "../../components/layout/Wrapper";
 import Button from "../../UI/Button";
 import respond from "../../config";
-import Link from "next/link";
+import NavButton from "../../UI/NavButton";
 
 const Hero = (props) => {
 	return (
@@ -38,9 +38,12 @@ const Hero = (props) => {
 						<br /> enthusiast.
 					</p>
 
-					<Link href="/headphones/xx99-mark-two-headphones" passHref>
-						<Button className="btn--1">See product</Button>
-					</Link>
+					<NavButton
+						href="/headphones/xx99-mark-two-headphones"
+						className="btn--1"
+					>
+						See product
+					</NavButton>
 				</div>
 			</Wrapper>
 		</section>

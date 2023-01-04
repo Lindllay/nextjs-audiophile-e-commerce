@@ -1,7 +1,5 @@
-import styles from "./Button.module.css";
-
 const Button = (props) => {
-	const classes = `${styles.btn} ${styles[props.className]}`;
+	const classes = `btn ${props.className}`;
 
 	return <button className={classes}>{props.children}</button>;
 };

@@ -2,6 +2,7 @@ import styles from "./OthersItem.module.css";
 import Button from "../../UI/Button";
 import respond from "../../config";
 import Link from "next/link";
+import NavButton from "../../UI/NavButton";
 
 const OthersItem = (props) => {
 	const refractoredImgSrc = {
@@ -31,11 +32,14 @@ const OthersItem = (props) => {
 				<img src={refractoredImgSrc.desktop} alt="product-image" />
 			</picture>
 			<h5 className={styles["heading-5"]}>{props.name}</h5>
-			<Button className="btn--1">
+			<NavButton href={`/${othersCategory}/${props.slug}`} className="btn--1">
+				See product
+			</NavButton>
+			{/* <Button className="btn--1">
 				<Link href={`/${othersCategory}/${props.slug}`} className={styles.link}>
 					See product
 				</Link>
-			</Button>
+			</Button> */}
 		</li>
 	);
 };

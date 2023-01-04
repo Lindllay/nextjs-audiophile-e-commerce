@@ -1,5 +1,5 @@
 import styles from "./ProductsHome.module.css";
-import Link from "next/link";
+import NavButton from "../../UI/NavButton";
 
 import Button from "../../UI/Button";
 
@@ -22,32 +22,28 @@ const ProductsHome = (props) => {
 						truly remarkable sound.
 					</p>
 
-					<Button className="btn--3">
-						<Link href={"/speakers/zx9-speaker"} className={styles.link}>
-							See product
-						</Link>
-					</Button>
+					<NavButton href={"/speakers/zx9-speaker"} className="btn--3">
+						See product
+					</NavButton>
 				</div>
 			</div>
 			<div className={styles["zx7-container"]}>
 				<div>
 					<h4 className={styles["heading-4"]}>ZX7 Speaker</h4>
-					<Button className="btn--2">
-						<Link href={"/speakers/zx7-speaker"} className={styles.link}>
-							See product
-						</Link>
-					</Button>
+
+					<NavButton href={"/speakers/zx7-speaker"} className="btn--2">
+						See product
+					</NavButton>
 				</div>
 			</div>
 			<div className={styles["yx1-container"]}>
 				<figure></figure>
 				<div>
 					<h4 className={styles["heading-4"]}>YX1 Earphones</h4>
-					<Button className="btn--2">
-						<Link href={"/earphones/yx1-earphones"} className={styles.link}>
-							See product
-						</Link>
-					</Button>
+
+					<NavButton href={"/earphones/yx1-earphones"} className="btn--2">
+						See product
+					</NavButton>
 				</div>
 			</div>
 		</section>

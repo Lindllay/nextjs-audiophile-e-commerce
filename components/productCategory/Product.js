@@ -3,6 +3,7 @@ import Button from "../../UI/Button";
 import CounterButton from "../../UI/CounterButton";
 import respond from "../../config";
 import Link from "next/link";
+import NavButton from "../../UI/NavButton";
 
 const Product = (props) => {
 	const refractoredImgSrc = {
@@ -37,12 +38,12 @@ const Product = (props) => {
 					)}`}</p>
 				)}
 				{!props.isDetail && (
-					<Link
+					<NavButton
 						href={`/${props.category}/${props.slug}`}
-						className={styles.link}
+						className="btn--1"
 					>
-						<Button className="btn--1">See Product</Button>
-					</Link>
+						See Product
+					</NavButton>
 				)}
 				{props.isDetail && (
 					<div className={styles.actions}>
