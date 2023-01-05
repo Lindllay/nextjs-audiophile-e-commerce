@@ -4,7 +4,7 @@ import Footer from "../components/layout/footer/Footer";
 import useScrollRestoration from "./utils/hooks/useScrollRestoration";
 import Cart from "../components/cart/Cart";
 import { useState } from "react";
-import { useDisableBodyScroll } from "./utils/hooks/useDisableBodyScroll";
+import useDisableBodyScroll from "./utils/hooks/useDisableBodyScroll";
 
 export default function App({ Component, pageProps, router }) {
 	useScrollRestoration(router);
