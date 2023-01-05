@@ -16,7 +16,7 @@ const Header = (props) => {
 					<img src="/assets/shared/desktop/logo.svg" alt="logo" />
 				</div>
 				<Navigation />
-				<CartIcon />
+				<CartIcon onClick={props.onShowCart} />
 			</Wrapper>
 		</header>
 	);
