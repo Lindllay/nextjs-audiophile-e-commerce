@@ -9,28 +9,28 @@ import { useContext, useEffect, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
 
 const Product = (props) => {
-	const [bump, setBump] = useState(true);
+	const [bump, setBump] = useState(false);
 	const [initialRender, setInitialRender] = useState(true);
 
 	const cartCtx = useContext(CartContext);
 	const { items } = cartCtx;
 
-	useEffect(() => {
-		if (initialRender) {
-			setInitialRender(false);
-			return;
-		}
+	// useEffect(() => {
+	// 	if (initialRender) {
+	// 		setInitialRender(false);
+	// 		return;
+	// 	}
 
-		setBump(true);
+	// 	setBump(true);
 
-		const timer = setTimeout(() => {
-			setBump(false);
-		}, 2000);
+	// 	const timer = setTimeout(() => {
+	// 		setBump(false);
+	// 	}, 2000);
 
-		return () => {
-			clearTimeout(timer);
-		};
-	}, [items]);
+	// 	return () => {
+	// 		clearTimeout(timer);
+	// 	};
+	// }, [items]);
 
 	const refractoredImgSrc = {
 		desktop: props.image.desktop.replace(".", ""),
@@ -48,6 +48,13 @@ const Product = (props) => {
 			image: `/assets/cart/image-${props.slug}.jpg`,
 			amount,
 		});
+		setBump(true);
+		const timer = setTimeout(() => {
+			setBump(false);
+		}, 2000);
+		return () => {
+			clearTimeout(timer);
+		};
 	};
 
 	return (
