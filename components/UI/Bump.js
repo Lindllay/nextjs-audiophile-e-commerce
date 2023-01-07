@@ -1,11 +1,11 @@
 import styles from "./Bump.module.css";
 
 const Bump = (props) => {
-	const classes = `${styles.picture} ${props.bump ? `${styles.bump}` : ""}`;
+	const classes = `${styles.container} ${props.bump ? `${styles.bump}` : ""}`;
 	return (
-		<picture className={classes}>
-			<img src="/jago.jpg" alt="" />
-		</picture>
+		<div className={classes}>
+			<p className={styles.paragraph}>Item Added!</p>
+		</div>
 	);
 };
 

@@ -9,17 +9,23 @@ import { useContext, useEffect, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
 
 const Product = (props) => {
-	const [bump, setBump] = useState(false);
+	const [bump, setBump] = useState(true);
+	const [initialRender, setInitialRender] = useState(true);
 
 	const cartCtx = useContext(CartContext);
 	const { items } = cartCtx;
 
 	useEffect(() => {
+		if (initialRender) {
+			setInitialRender(false);
+			return;
+		}
+
 		setBump(true);
 
 		const timer = setTimeout(() => {
 			setBump(false);
-		}, 1500);
+		}, 2000);
 
 		return () => {
 			clearTimeout(timer);
@@ -42,7 +48,6 @@ const Product = (props) => {
 			image: `/assets/cart/image-${props.slug}.jpg`,
 			amount,
 		});
-		setBump(true);
 	};
 
 	return (
