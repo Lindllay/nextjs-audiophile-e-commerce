@@ -1,5 +1,5 @@
 import styles from "./Category.module.css";
-import Button from "../../../UI/Button";
+import Button from "../../UI/Button";
 import Link from "next/link";
 
 const Category = (props) => {

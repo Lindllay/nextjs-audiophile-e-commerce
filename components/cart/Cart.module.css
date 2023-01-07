@@ -1,4 +1,9 @@
 .cart {
+	width: 40rem;
+	min-height: 15rem;
+	/* max-height: 50rem; */
+	top: 3rem;
+	right: 10rem;
 }
 
 .quantity-container {
@@ -12,6 +17,12 @@
 	font-weight: 600;
 	letter-spacing: 3px;
 	line-height: 2.4rem;
+}
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	text-align: center;
 }
 
 .btn {
@@ -29,6 +40,7 @@
 	flex-direction: column;
 	gap: 2.4rem;
 	overflow-y: auto;
-	max-height: 30rem;
-	margin-bottom: 3.5rem;
+	max-height: 50vh;
+	margin-bottom: 5rem;
+	padding: 0.3rem;
 }

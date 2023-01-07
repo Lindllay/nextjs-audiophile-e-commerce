@@ -1,8 +1,8 @@
 import styles from "./Hero.module.css";
 import Wrapper from "../../components/layout/Wrapper";
-import Button from "../../UI/Button";
+import Button from "../UI/Button";
 import respond from "../../config";
-import NavButton from "../../UI/NavButton";
+import NavButton from "../UI/NavButton";
 
 const Hero = (props) => {
 	return (

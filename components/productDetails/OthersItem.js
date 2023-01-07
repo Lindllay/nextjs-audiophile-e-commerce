@@ -1,8 +1,6 @@
 import styles from "./OthersItem.module.css";
-import Button from "../../UI/Button";
 import respond from "../../config";
-import Link from "next/link";
-import NavButton from "../../UI/NavButton";
+import NavButton from "../UI/NavButton";
 
 const OthersItem = (props) => {
 	const refractoredImgSrc = {

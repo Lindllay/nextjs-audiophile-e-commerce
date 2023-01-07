@@ -5,6 +5,7 @@ import useScrollRestoration from "./utils/hooks/useScrollRestoration";
 import Cart from "../components/cart/Cart";
 import { useState } from "react";
 import useDisableBodyScroll from "./utils/hooks/useDisableBodyScroll";
+import CartProvider from "../components/store/CartProvider";
 
 export default function App({ Component, pageProps, router }) {
 	useScrollRestoration(router);
@@ -20,11 +21,11 @@ export default function App({ Component, pageProps, router }) {
 	};
 
 	return (
-		<>
+		<CartProvider>
 			{isCartShowed && <Cart onHideCart={hideCartHandler} />}
 			<Header onShowCart={showCartHandler} />
 			<Component {...pageProps} />
 			<Footer />
-		</>
+		</CartProvider>
 	);
 }

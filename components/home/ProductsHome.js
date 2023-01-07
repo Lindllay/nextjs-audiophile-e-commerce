@@ -1,7 +1,5 @@
 import styles from "./ProductsHome.module.css";
-import NavButton from "../../UI/NavButton";
-
-import Button from "../../UI/Button";
+import NavButton from "../UI/NavButton";
 
 const ProductsHome = (props) => {
 	return (

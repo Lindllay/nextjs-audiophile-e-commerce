@@ -1,0 +1,32 @@
+.picture {
+	position: absolute;
+	height: 40rem;
+	width: 40rem;
+	top: 10rem;
+	left: 0rem;
+	transform: translateX(-27rem);
+	transition: all 0.5s ease-in-out;
+}
+
+.picture img {
+	height: 100%;
+}
+
+.picture.bump {
+	animation: bump 1500ms ease-out;
+}
+
+@keyframes bump {
+	0% {
+		transform: translateX(-27rem);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	80% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-27rem);
+	}
+}

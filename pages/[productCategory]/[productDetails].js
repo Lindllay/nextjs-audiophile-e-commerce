@@ -10,7 +10,7 @@ import fsPromises from "fs/promises";
 import path from "path";
 
 const DetailsPage = (props) => {
-	const data = props.productDetails[0];
+	const [data] = props.productDetails;
 
 	return (
 		<>
@@ -23,8 +23,10 @@ const DetailsPage = (props) => {
 					id={data.id}
 					key={data.id}
 					name={data.name}
+					cartName={data.cartName}
 					new={data.new}
 					price={data.price}
+					slug={data.slug}
 					isDetail={true}
 				></Product>
 				<Features features={data.features} includes={data.includes} />

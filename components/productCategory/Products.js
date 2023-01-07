@@ -7,6 +7,7 @@ const Products = (props) => {
 			<ul className={styles.items}>
 				{props.data.map((product) => (
 					<Product
+						slug={product.slug}
 						image={product.image}
 						description={product.description}
 						id={product.id}
@@ -16,7 +17,7 @@ const Products = (props) => {
 						price={product.price}
 						isDetail={props.isDetail}
 						category={product.category}
-						slug={product.slug}
+						cartName={product.cartName}
 					/>
 				))}
 			</ul>
