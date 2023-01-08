@@ -1,17 +1,18 @@
 .container {
 	position: fixed;
-	top: 2rem;
-	right: 15.6rem;
-	transform: translateY(-10rem);
-	transition: all 0.5s ease-in-out;
+	bottom: 0rem;
+	right: 3.2rem;
+	transform: translateY(4.5rem);
+	transition: all 0.5s;
 	background-color: var(--color-raw-sienna);
-	padding: 0.8rem 1.5rem;
-	border-radius: 1.8rem;
+	padding: 1rem 2.5rem;
+	border-radius: 0.8rem;
+
 	box-shadow: 0px 3px 25px 25px rgba(0, 0, 0, 0.055);
 }
 
 .container.bump {
-	animation: bump 2000ms ease-out;
+	animation: bump 1000ms ease-out;
 }
 
 .paragraph {
@@ -25,15 +26,15 @@
 
 @keyframes bump {
 	0% {
-		transform: translateY(-10rem);
+		transform: translateY(4.5rem);
 	}
-	30% {
-		transform: translateY(0);
+	10% {
+		transform: translateY(-0.5rem);
 	}
-	70% {
-		transform: translateY(0);
+	80% {
+		transform: translateY(-0.5rem);
 	}
 	100% {
-		transform: translateY(-10rem);
+		transform: translateY(4.5rem);
 	}
 }

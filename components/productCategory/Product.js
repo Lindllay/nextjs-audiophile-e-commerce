@@ -51,7 +51,7 @@ const Product = (props) => {
 		setBump(true);
 		const timer = setTimeout(() => {
 			setBump(false);
-		}, 2000);
+		}, 1000);
 		return () => {
 			clearTimeout(timer);
 		};
