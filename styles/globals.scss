@@ -123,6 +123,8 @@ body {
 	padding: 1.5rem 3rem;
 	background-color: var(--color-raw-sienna);
 	color: var(--color-light-grey);
+	text-align: center;
+	border-radius: 0.8rem;
 }
 
 .btn--1:hover,
@@ -183,16 +185,14 @@ body {
 	color: var(--color-white-75);
 }
 
-.header-background {
-	height: 9.7rem;
-	margin-top: -9.6rem;
-	background-color: var(--color-black-background);
-}
-
 .block-margin-large {
 	margin-block: 16rem;
 }
 
 .full-width {
 	width: 100%;
+}
+
+.bg-checkout {
+	background-color: var(--color-grey) !important;
 }

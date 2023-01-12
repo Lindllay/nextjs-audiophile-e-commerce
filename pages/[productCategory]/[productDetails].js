@@ -14,7 +14,6 @@ const DetailsPage = (props) => {
 
 	return (
 		<>
-			<div className="header-background"></div>
 			<Content>
 				<Product
 					margin={true}

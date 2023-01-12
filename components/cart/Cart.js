@@ -1,9 +1,10 @@
 import Modal from "../UI/Modal";
 import styles from "./Cart.module.css";
 import CartItem from "./CartItem";
-import Button from "../UI/Button";
+import NavButton from "../UI/NavButton";
 import { useContext } from "react";
 import CartContext from "../store/cart-context";
+import Link from "next/link";
 
 const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
@@ -58,7 +59,11 @@ const Cart = (props) => {
 					Your shopping cart is currently empty!
 				</p>
 			)}
-			{!!itemsInCart && <Button className="btn--1 full-width">Checkout</Button>}
+			{!!itemsInCart && (
+				<NavButton href="/checkout" className="btn--1 full-width">
+					Checkout
+				</NavButton>
+			)}
 		</Modal>
 	);
 };

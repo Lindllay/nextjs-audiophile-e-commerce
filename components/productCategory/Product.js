@@ -5,32 +5,13 @@ import respond from "../../config";
 import NavButton from "../UI/NavButton";
 import Bump from "../UI/Bump";
 
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
 
 const Product = (props) => {
 	const [bump, setBump] = useState(false);
-	const [initialRender, setInitialRender] = useState(true);
 
 	const cartCtx = useContext(CartContext);
-	const { items } = cartCtx;
-
-	// useEffect(() => {
-	// 	if (initialRender) {
-	// 		setInitialRender(false);
-	// 		return;
-	// 	}
-
-	// 	setBump(true);
-
-	// 	const timer = setTimeout(() => {
-	// 		setBump(false);
-	// 	}, 2000);
-
-	// 	return () => {
-	// 		clearTimeout(timer);
-	// 	};
-	// }, [items]);
 
 	const refractoredImgSrc = {
 		desktop: props.image.desktop.replace(".", ""),

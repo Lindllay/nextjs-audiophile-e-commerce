@@ -2,7 +2,7 @@
 	display: flex;
 	gap: 3.4rem;
 	text-decoration: none;
-	margin-right: 12rem;
+	transform: translateX(-4rem);
 }
 
 .nav-item {

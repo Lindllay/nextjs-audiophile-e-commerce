@@ -1,0 +1,32 @@
+.form-control {
+	display: flex;
+	flex-direction: column;
+	font-weight: 600;
+}
+
+.form-control label {
+	font-size: 1.2rem;
+	margin-bottom: 8px;
+	font-weight: inherit;
+}
+
+.form-control input {
+	font-size: 1.4rem;
+
+	padding: 1.8rem 2.4rem;
+	font-family: inherit;
+	border-radius: 0.8rem;
+	border: 1px solid #cfcfcf;
+	font-weight: inherit;
+}
+
+.form-control input::placeholder {
+	color: rgba(0, 0, 0, 0.4);
+	font-weight: inherit;
+}
+
+.form-control input:focus {
+	outline: none;
+	border: 1px solid var(--color-raw-sienna);
+	font-weight: inherit;
+}

@@ -1,7 +1,6 @@
 .category-header {
 	background-color: var(--color-black-background);
-	height: 33rem;
-	margin-top: -9.6rem;
+	height: 23rem;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -13,5 +12,5 @@
 	letter-spacing: 1.5px;
 	line-height: 4.4rem;
 	color: #fff;
-	margin-bottom: 9.7rem;
+	margin-bottom: 9.6rem;
 }
