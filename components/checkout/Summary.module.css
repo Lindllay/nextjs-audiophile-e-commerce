@@ -1,6 +1,44 @@
 .summary {
 	background-color: white;
-	height: 20rem;
+	height: max-content;
 	width: 35rem;
 	border-radius: 0.8rem;
+	padding: 3.2rem;
+}
+.text-box {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.8rem;
+	font-size: 1.5rem;
+}
+.text-box:last-child {
+	margin-block: 2.4rem;
+}
+
+.text-box:first-child {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+}
+.text-box:last-child {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.text-box span {
+	color: var(--color-raw-sienna);
+}
+
+.heading-6 {
+	font-size: 1.8rem;
+	font-weight: 600;
+	margin-bottom: 3rem;
+}
+.label {
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+}
+
+.amount {
+	font-weight: 600;
 }

@@ -4,7 +4,6 @@ import CartItem from "./CartItem";
 import NavButton from "../UI/NavButton";
 import { useContext } from "react";
 import CartContext from "../store/cart-context";
-import Link from "next/link";
 
 const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
@@ -60,7 +59,11 @@ const Cart = (props) => {
 				</p>
 			)}
 			{!!itemsInCart && (
-				<NavButton href="/checkout" className="btn--1 full-width">
+				<NavButton
+					href="/checkout"
+					className="btn--1 full-width"
+					onClick={props.onHideCart}
+				>
 					Checkout
 				</NavButton>
 			)}

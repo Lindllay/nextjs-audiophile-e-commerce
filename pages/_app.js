@@ -6,6 +6,7 @@ import useDisableBodyScroll from "../components/utils/hooks/useDisableBodyScroll
 import Cart from "../components/cart/Cart";
 import { useState } from "react";
 import CartProvider from "../components/store/CartProvider";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps, router }) {
 	useScrollRestoration(router);
@@ -20,10 +21,11 @@ export default function App({ Component, pageProps, router }) {
 		setIsCartShowed(false);
 	};
 
-	const transparentBg = router.state?.pathname === "/";
+	const query = useRouter();
+	const { pathname } = query;
 
-	const underline =
-		router.state?.pathname === "/[productCategory]/[productDetails]";
+	const transparentBg = pathname === "/";
+	const underline = pathname === "/[productCategory]/[productDetails]";
 
 	return (
 		<CartProvider>

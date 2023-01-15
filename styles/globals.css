@@ -183,6 +183,10 @@ body {
   margin-block: 16rem;
 }
 
+.top-margin-small {
+  margin-top: 3.2rem;
+}
+
 .full-width {
   width: 100%;
 }
