@@ -2,11 +2,13 @@ import styles from "./CheckoutForm.module.css";
 import * as yup from "yup";
 import { useState } from "react";
 import Popup from "./Popup";
+import useDisableBodyScroll from "../utils/hooks/useDisableBodyScroll";
 
 import { useFormik } from "formik";
 
 const CheckoutForm = (props) => {
 	const [isModalShowed, setIsModalShowed] = useState(false);
+	useDisableBodyScroll(isModalShowed);
 
 	const hideCartHandler = function () {
 		setIsModalShowed(false);

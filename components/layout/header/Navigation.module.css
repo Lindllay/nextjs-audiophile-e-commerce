@@ -19,3 +19,14 @@
 .nav-item:hover {
 	color: var(--color-raw-sienna);
 }
+
+.active {
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	color: var(--color-raw-sienna);
+}

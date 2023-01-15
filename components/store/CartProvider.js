@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import CartContext from "./cart-context";
 
 const defaultCartState = {
@@ -28,6 +28,10 @@ const cartReducer = (state, action) => {
 			} else {
 				updatedItems = [...state.items, action.item];
 			}
+			localStorage.setItem(
+				"cart",
+				JSON.stringify({ items: updatedItems, totalAmount: updatedTotalAmount })
+			);
 			return {
 				items: updatedItems,
 				totalAmount: updatedTotalAmount,
@@ -52,6 +56,10 @@ const cartReducer = (state, action) => {
 			} else {
 				updatedItems = state.items.filter((item) => item.id !== action.id);
 			}
+			localStorage.setItem(
+				"cart",
+				JSON.stringify({ items: updatedItems, totalAmount: updatedTotalAmount })
+			);
 			return {
 				items: updatedItems,
 				totalAmount: updatedTotalAmount,
@@ -59,7 +67,14 @@ const cartReducer = (state, action) => {
 		}
 
 		case "CLEAR": {
+			localStorage.setItem("cart", JSON.stringify(defaultCartState));
 			return defaultCartState;
+		}
+		case "LOAD": {
+			return {
+				items: action.payload.items,
+				totalAmount: action.payload.totalAmount,
+			};
 		}
 	}
 
@@ -71,6 +86,10 @@ const CartProvider = (props) => {
 		cartReducer,
 		defaultCartState
 	);
+
+	useEffect(() => {
+		loadItemsFromStorageHandler();
+	}, []);
 
 	const addItemToCartHandler = (item) => {
 		dispatchCartAction({
@@ -88,6 +107,13 @@ const CartProvider = (props) => {
 	const clearAllItemsFromCartHandler = () => {
 		dispatchCartAction({
 			type: "CLEAR",
+		});
+	};
+
+	const loadItemsFromStorageHandler = () => {
+		dispatchCartAction({
+			type: "LOAD",
+			payload: JSON.parse(localStorage.getItem("cart")),
 		});
 	};
 

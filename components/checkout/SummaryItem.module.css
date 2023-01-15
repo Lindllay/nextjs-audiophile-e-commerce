@@ -2,6 +2,10 @@
 	display: flex;
 	margin-bottom: 2.4rem;
 }
+.item:last-child {
+	margin-bottom: 0;
+}
+
 .img {
 	width: 6.4rem;
 	height: 6.4rem;
@@ -30,7 +34,7 @@
 	font-size: 1.5rem;
 }
 .price {
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 1.4rem;
 	color: rgba(0, 0, 0, 0.5);
 }

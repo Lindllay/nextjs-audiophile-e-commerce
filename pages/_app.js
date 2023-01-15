@@ -4,7 +4,7 @@ import Footer from "../components/layout/footer/Footer";
 import useScrollRestoration from "../components/utils/hooks/useScrollRestoration";
 import useDisableBodyScroll from "../components/utils/hooks/useDisableBodyScroll";
 import Cart from "../components/cart/Cart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartProvider from "../components/store/CartProvider";
 import { useRouter } from "next/router";
 
@@ -13,6 +13,10 @@ export default function App({ Component, pageProps, router }) {
 
 	const [isCartShowed, setIsCartShowed] = useState(false);
 	useDisableBodyScroll(isCartShowed);
+
+	useEffect(() => {
+		setIsCartShowed(false);
+	}, []);
 
 	const showCartHandler = function () {
 		setIsCartShowed(true);

@@ -33,6 +33,9 @@
 	text-decoration: underline;
 	cursor: pointer;
 }
+.btn:hover {
+	color: var(--color-raw-sienna);
+}
 
 .list {
 	list-style: none;

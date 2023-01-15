@@ -42,25 +42,6 @@
 	display: flex;
 	justify-self: flex-end;
 }
-.links {
-	display: flex;
-	gap: 3.4rem;
-}
-
-.links > * {
-	color: white;
-	text-decoration: none;
-	font-size: 1.3rem;
-	font-weight: 600;
-	letter-spacing: 1px;
-	line-height: 25px;
-	text-transform: uppercase;
-	transition: all 0.2s;
-}
-
-.links > *:hover {
-	color: var(--color-raw-sienna);
-}
 
 .icons {
 	display: flex;
@@ -89,4 +70,37 @@
 	height: 4px;
 	width: 10rem;
 	background-color: var(--color-raw-sienna);
+}
+
+.nav-items {
+	display: flex;
+	gap: 3.4rem;
+	text-decoration: none;
+	transform: translateX(-4rem);
+}
+
+.nav-item {
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+	color: #ffffff;
+	transition: all 0.2s;
+}
+
+.nav-item:hover {
+	color: var(--color-raw-sienna);
+}
+
+.active {
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-transform: uppercase;
+	transition: all 0.2s;
+	color: var(--color-raw-sienna);
 }

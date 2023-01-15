@@ -5,26 +5,26 @@
 	border-radius: 0.8rem;
 	padding: 3.2rem;
 }
-.text-box {
+.costs-box {
+	padding-top: 2.4rem;
+}
+.cost-box {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 0.8rem;
 	font-size: 1.5rem;
 }
-.text-box:last-child {
-	margin-block: 2.4rem;
-}
 
-.text-box:first-child {
+.cost-box:first-child {
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 2.5rem;
 }
-.text-box:last-child {
+.cost-box:last-child {
 	font-size: 1.8rem;
 	font-weight: 600;
 }
-.text-box span {
+.cost-box span {
 	color: var(--color-raw-sienna);
 }
 
@@ -32,6 +32,12 @@
 	font-size: 1.8rem;
 	font-weight: 600;
 	margin-bottom: 3rem;
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
 }
 .label {
 	font-weight: 400;

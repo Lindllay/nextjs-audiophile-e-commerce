@@ -9,8 +9,6 @@ const Cart = (props) => {
 	const cartCtx = useContext(CartContext);
 	const itemsInCart = cartCtx.items.reduce((acc, cur) => acc + cur.amount, 0);
 
-	console.log(cartCtx.items);
-
 	const cartItemAddHandler = (item) => {
 		cartCtx.addItem({
 			...item,
@@ -21,6 +19,8 @@ const Cart = (props) => {
 	const cartItemRemoveHandler = (id) => {
 		cartCtx.removeItem(id);
 	};
+
+	cartCtx.items.sort((a, b) => (a.price > b.price ? -1 : 1));
 
 	const cartItems = (
 		<ul className={styles.list}>

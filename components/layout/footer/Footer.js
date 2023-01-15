@@ -1,10 +1,12 @@
 import styles from "./Footer.module.scss";
 import Wrapper from "../Wrapper";
-import respond from "../../../config";
+import { useRouter } from "next/router";
 
 import Link from "next/link";
 
 const Footer = (props) => {
+	const router = useRouter();
+
 	return (
 		<section className={styles["footer-background"]}>
 			<Wrapper>
@@ -24,13 +26,45 @@ const Footer = (props) => {
 						Copyright 2021. All Rights Reserved
 					</p>
 					<nav className={styles.navigation}>
-						<ul className={styles.links}>
-							<Link href={"/"} className={styles["nav-item"]}>
+						<ul className={styles["nav-items"]}>
+							<Link
+								href={"/"}
+								className={
+									router.asPath === "/" ? styles.active : styles["nav-item"]
+								}
+							>
 								Home
 							</Link>
-							<Link href={"/headphones"}>Headphones</Link>
-							<Link href={"/speakers"}>Speakers</Link>
-							<Link href={"/earphones"}>Earphones</Link>
+							<Link
+								href={"/headphones"}
+								className={
+									router.query.productCategory === "headphones"
+										? styles.active
+										: styles["nav-item"]
+								}
+							>
+								Headphones
+							</Link>
+							<Link
+								href={"/speakers"}
+								className={
+									router.query.productCategory === "speakers"
+										? styles.active
+										: styles["nav-item"]
+								}
+							>
+								Speakers
+							</Link>
+							<Link
+								href={"/earphones"}
+								className={
+									router.query.productCategory === "earphones"
+										? styles.active
+										: styles["nav-item"]
+								}
+							>
+								Earphones
+							</Link>
 						</ul>
 					</nav>
 					<div className={styles.icons}>
