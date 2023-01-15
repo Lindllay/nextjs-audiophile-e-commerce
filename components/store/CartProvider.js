@@ -1,10 +1,11 @@
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useRef } from "react";
 import CartContext from "./cart-context";
 
 const defaultCartState = {
 	items: [],
 	totalAmount: 0,
 };
+
 const cartReducer = (state, action) => {
 	switch (action.type) {
 		case "ADD": {
@@ -80,6 +81,23 @@ const CartProvider = (props) => {
 		defaultCartState
 	);
 
+	const initialRender = useRef(true);
+
+	useEffect(() => {
+		const data = localStorage.getItem("cart");
+		if (data) {
+			loadCartItemsFromStorageHandler();
+		}
+	}, []);
+
+	useEffect(() => {
+		if (initialRender.current) {
+			initialRender.current = false;
+			return;
+		}
+		localStorage.setItem("cart", JSON.stringify(cartState));
+	}, [cartState]);
+
 	const addItemToCartHandler = (item) => {
 		dispatchCartAction({
 			type: "ADD",
@@ -96,6 +114,13 @@ const CartProvider = (props) => {
 	const clearAllItemsFromCartHandler = () => {
 		dispatchCartAction({
 			type: "CLEAR",
+		});
+	};
+
+	const loadCartItemsFromStorageHandler = () => {
+		dispatchCartAction({
+			type: "LOAD",
+			payload: JSON.parse(localStorage.getItem("cart")),
 		});
 	};
 
