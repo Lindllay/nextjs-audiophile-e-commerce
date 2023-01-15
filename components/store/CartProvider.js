@@ -28,10 +28,7 @@ const cartReducer = (state, action) => {
 			} else {
 				updatedItems = [...state.items, action.item];
 			}
-			localStorage.setItem(
-				"cart",
-				JSON.stringify({ items: updatedItems, totalAmount: updatedTotalAmount })
-			);
+
 			return {
 				items: updatedItems,
 				totalAmount: updatedTotalAmount,
@@ -56,10 +53,7 @@ const cartReducer = (state, action) => {
 			} else {
 				updatedItems = state.items.filter((item) => item.id !== action.id);
 			}
-			localStorage.setItem(
-				"cart",
-				JSON.stringify({ items: updatedItems, totalAmount: updatedTotalAmount })
-			);
+
 			return {
 				items: updatedItems,
 				totalAmount: updatedTotalAmount,
@@ -67,7 +61,6 @@ const cartReducer = (state, action) => {
 		}
 
 		case "CLEAR": {
-			localStorage.setItem("cart", JSON.stringify(defaultCartState));
 			return defaultCartState;
 		}
 		case "LOAD": {
@@ -87,10 +80,6 @@ const CartProvider = (props) => {
 		defaultCartState
 	);
 
-	useEffect(() => {
-		loadItemsFromStorageHandler();
-	}, []);
-
 	const addItemToCartHandler = (item) => {
 		dispatchCartAction({
 			type: "ADD",
@@ -107,13 +96,6 @@ const CartProvider = (props) => {
 	const clearAllItemsFromCartHandler = () => {
 		dispatchCartAction({
 			type: "CLEAR",
-		});
-	};
-
-	const loadItemsFromStorageHandler = () => {
-		dispatchCartAction({
-			type: "LOAD",
-			payload: JSON.parse(localStorage.getItem("cart")),
 		});
 	};
 
