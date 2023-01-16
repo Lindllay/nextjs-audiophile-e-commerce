@@ -47,7 +47,7 @@ const Popup = (props) => {
 	};
 
 	return (
-		<Modal className={styles.popup} onClick={props.onHideCart}>
+		<Modal className={styles.popup}>
 			<figure className={styles.image}>
 				<img src="/assets/checkout/icon-order-confirmation.svg" alt="icon" />
 			</figure>

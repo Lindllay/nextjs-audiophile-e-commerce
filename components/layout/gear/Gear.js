@@ -1,4 +1,4 @@
-import styles from "./Gear.module.css";
+import styles from "./Gear.module.scss";
 import respond from "../../../config";
 
 const Gear = (props) => {

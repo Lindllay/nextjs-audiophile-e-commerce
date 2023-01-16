@@ -1,4 +1,4 @@
-import styles from "./Wrapper.module.css";
+import styles from "./Wrapper.module.scss";
 
 const Wrapper = (props) => {
 	const classes = `${styles.wrapper} ${props.className ? props.className : ""}`;

@@ -1,4 +1,4 @@
-import styles from "./ProductsHome.module.css";
+import styles from "./_ProductsHome.module.scss";
 import NavButton from "../UI/NavButton";
 
 const ProductsHome = (props) => {

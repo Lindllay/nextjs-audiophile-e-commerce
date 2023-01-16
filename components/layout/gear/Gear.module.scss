@@ -1,12 +1,25 @@
+@import "../../../styles/mixins";
+
 .gear {
 	display: flex;
 	align-items: center;
-	gap: 12.5rem;
-	margin-bottom: 20rem;
+	gap: 6.3rem;
+	margin-bottom: 9.6rem;
+
+	@include respond(tablet) {
+		flex-direction: column;
+	}
 }
 
 .content {
 	flex: 1;
+	@include respond(tablet) {
+		display: flex;
+		flex-direction: column;
+		order: 2;
+		padding-inline: 9.6rem;
+		text-align: center;
+	}
 }
 
 .heading-2 {
@@ -29,6 +42,11 @@
 .picture {
 	flex: 1;
 	height: 100%;
+	@include respond(tablet) {
+		display: flex;
+		flex-direction: column;
+		order: 1;
+	}
 }
 .picture img {
 	width: 100%;

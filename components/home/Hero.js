@@ -1,6 +1,5 @@
-import styles from "./Hero.module.css";
+import styles from "./_Hero.module.scss";
 import Wrapper from "../../components/layout/Wrapper";
-import Button from "../UI/Button";
 import respond from "../../config";
 import NavButton from "../UI/NavButton";
 
