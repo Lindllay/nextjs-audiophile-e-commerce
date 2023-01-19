@@ -8,7 +8,6 @@ const RadioInput = forwardRef((props, ref) => {
 		props.onGetPaymentMethod(event.target.value);
 	};
 
-	const value = props.value;
 	return (
 		<div className={classes}>
 			<input

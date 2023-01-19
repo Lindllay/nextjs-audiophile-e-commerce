@@ -4,7 +4,11 @@ import Link from "next/link";
 
 const Category = (props) => {
 	return (
-		<Link className={styles.category} href={`/${props.categoryName}`}>
+		<Link
+			className={styles.category}
+			href={`/${props.categoryName}`}
+			onClick={props.onClick}
+		>
 			<figure className={styles.figure}>
 				<img src={props.image} alt="thumbnail" />
 			</figure>

@@ -11,16 +11,6 @@ import { useRouter } from "next/router";
 export default function App({ Component, pageProps, router }) {
 	useScrollRestoration(router);
 
-	const [isCartShowed, setIsCartShowed] = useState(false);
-	useDisableBodyScroll(isCartShowed);
-
-	const showCartHandler = function () {
-		setIsCartShowed(true);
-	};
-	const hideCartHandler = function () {
-		setIsCartShowed(false);
-	};
-
 	const query = useRouter();
 	const { pathname } = query;
 
@@ -28,8 +18,7 @@ export default function App({ Component, pageProps, router }) {
 
 	return (
 		<CartProvider>
-			{isCartShowed && <Cart onHideCart={hideCartHandler} />}
-			<Header onShowCart={showCartHandler} underline={underline} />
+			<Header underline={underline} />
 			<Component {...pageProps} />
 			<Footer />
 		</CartProvider>

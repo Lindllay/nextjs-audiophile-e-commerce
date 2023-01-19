@@ -8,14 +8,17 @@ const Categories = (props) => {
 			<Category
 				image="/assets/shared/desktop/image-category-thumbnail-headphones.png"
 				categoryName="headphones"
+				onClick={props.onClick}
 			/>
 			<Category
 				image="/assets/shared/desktop/image-category-thumbnail-speakers.png"
 				categoryName="speakers"
+				onClick={props.onClick}
 			/>
 			<Category
 				image="/assets/shared/desktop/image-category-thumbnail-earphones.png"
 				categoryName="earphones"
+				onClick={props.onClick}
 			/>
 		</section>
 	);

@@ -2,32 +2,12 @@ import styles from "./_Hero.module.scss";
 import Wrapper from "../../components/layout/Wrapper";
 import respond from "../../config";
 import NavButton from "../UI/NavButton";
-import { useState, useEffect, useRef } from "react";
 import { forwardRef } from "react";
 
 const Hero = forwardRef((props, ref) => {
-	// const [isHeaderSticky, setIsHeaderSticky] = useState(null);
-
-	// useEffect(() => {
-	// 	const options = {
-	// 		root: null,
-	// 		threshold: 0,
-	// 		rootMargin: "0px",
-	// 	};
-
-	// 	const callback = (entry) => {
-	// 		console.log(entry[0]);
-	// 		setIsHeaderSticky(!entry[0].isIntersecting);
-	// 	};
-
-	// 	const observer = new IntersectionObserver(callback, options);
-	// 	const target = document.getElementById("");
-	// 	observer.observe(target);
-	// }, []);
-
 	return (
 		<section className={styles.hero}>
-			<picture>
+			<picture className={styles.picture}>
 				<source
 					media={`(max-width: ${respond.mobile})`}
 					srcSet="/assets/home/mobile/image-header.jpg"
