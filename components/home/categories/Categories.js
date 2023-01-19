@@ -1,10 +1,10 @@
-import styles from "./Categories.module.css";
+import styles from "./_Categories.module.scss";
 import Category from "./Category";
 import Link from "next/link";
 
 const Categories = (props) => {
 	return (
-		<section className={styles.categories}>
+		<section className={styles.categories} id="categories">
 			<Category
 				image="/assets/shared/desktop/image-category-thumbnail-headphones.png"
 				categoryName="headphones"

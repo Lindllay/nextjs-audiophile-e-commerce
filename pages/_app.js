@@ -24,17 +24,12 @@ export default function App({ Component, pageProps, router }) {
 	const query = useRouter();
 	const { pathname } = query;
 
-	const transparentBg = pathname === "/";
 	const underline = pathname === "/[productCategory]/[productDetails]";
 
 	return (
 		<CartProvider>
 			{isCartShowed && <Cart onHideCart={hideCartHandler} />}
-			<Header
-				onShowCart={showCartHandler}
-				transparentBg={transparentBg}
-				underline={underline}
-			/>
+			<Header onShowCart={showCartHandler} underline={underline} />
 			<Component {...pageProps} />
 			<Footer />
 		</CartProvider>

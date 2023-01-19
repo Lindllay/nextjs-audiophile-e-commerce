@@ -7,7 +7,10 @@
 }
 
 .wrapper {
-	@include respond(tablet) {
+	@include respond(tab-land) {
+		padding: 0 6.4rem;
+	}
+	@include respond(tab-port) {
 		padding: 0 4rem;
 	}
 }

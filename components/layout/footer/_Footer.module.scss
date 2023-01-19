@@ -11,6 +11,10 @@
 	padding: 7.5rem 0 4.8rem 0;
 	column-gap: 12rem;
 	position: relative;
+
+	@include respond(tab-land) {
+		grid-template-rows: repeat(4, min-content);
+	}
 }
 
 .logo {
@@ -26,6 +30,11 @@
 	font-weight: 400;
 	line-height: 2.5rem;
 	color: var(--color-white-50);
+
+	@include respond(tab-land) {
+		grid-row: 3;
+		grid-column: 1 / span 2;
+	}
 }
 
 .copyright {
@@ -36,11 +45,20 @@
 	font-weight: 600;
 	line-height: 2.5rem;
 	color: var(--color-white-50);
+	@include respond(tab-land) {
+		grid-row: 4;
+	}
 }
 
 .navigation {
 	display: flex;
 	justify-self: flex-end;
+	@include respond(tab-land) {
+		grid-column: 1 / span 2;
+		grid-row: 2;
+		justify-self: flex-start;
+		margin-bottom: 3.2rem;
+	}
 }
 
 .icons {
@@ -49,6 +67,11 @@
 
 	justify-self: flex-end;
 	align-self: center;
+
+	@include respond(tab-land) {
+		grid-column: 2;
+		grid-row: 4;
+	}
 }
 
 .icons > * {
@@ -76,7 +99,6 @@
 	display: flex;
 	gap: 3.4rem;
 	text-decoration: none;
-	transform: translateX(-4rem);
 }
 
 .nav-item {

@@ -1,4 +1,4 @@
-import Product from "../../components/productCategory/Product";
+import ProductDetails from "../../components/productDetails/ProductDetails";
 import Content from "../../components/layout/Content";
 import Features from "../../components/productDetails/Features";
 import Gallery from "../../components/productDetails/Gallery";
@@ -15,7 +15,7 @@ const DetailsPage = (props) => {
 	return (
 		<>
 			<Content>
-				<Product
+				<ProductDetails
 					margin={true}
 					image={data.image}
 					description={data.description}
@@ -27,7 +27,7 @@ const DetailsPage = (props) => {
 					price={data.price}
 					slug={data.slug}
 					isDetail={true}
-				></Product>
+				></ProductDetails>
 				<Features features={data.features} includes={data.includes} />
 				<Gallery gallery={data.gallery} name={data.name} />
 				<Others others={data.others} category={data.category} />

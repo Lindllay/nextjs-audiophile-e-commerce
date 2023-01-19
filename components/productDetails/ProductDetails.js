@@ -1,4 +1,4 @@
-import styles from "./Product.module.css";
+import styles from "./_ProductDetails.module.scss";
 import Button from "../UI/Button";
 import CounterButton from "../UI/CounterButton";
 import respond from "../../config";
@@ -8,7 +8,7 @@ import Bump from "../UI/Bump";
 import { useContext, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
 
-const Product = (props) => {
+const ProductDetails = (props) => {
 	const [bump, setBump] = useState(false);
 
 	const cartCtx = useContext(CartContext);
@@ -49,7 +49,7 @@ const Product = (props) => {
 					srcSet={refractoredImgSrc.mobile}
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet={refractoredImgSrc.tablet}
 				/>
 
@@ -85,4 +85,4 @@ const Product = (props) => {
 	);
 };
 
-export default Product;
+export default ProductDetails;

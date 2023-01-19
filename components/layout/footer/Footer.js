@@ -1,4 +1,4 @@
-import styles from "./Footer.module.scss";
+import styles from "./_Footer.module.scss";
 import Wrapper from "../Wrapper";
 import { useRouter } from "next/router";
 

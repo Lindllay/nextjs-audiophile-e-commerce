@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+
+.header {
+	display: flex;
+	position: fixed;
+	top: 0;
+
+	z-index: 9999;
+	width: 100%;
+	background-color: rgb(25, 25, 25);
+	height: 9.6rem;
+	transition: all 0.1s;
+}
+
+.header.reduce {
+	height: 6rem;
+}
+
+.wrapper-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+
+.underline .wrapper-header::after {
+	position: absolute;
+	content: "";
+	width: calc(100% - 19.2rem);
+	height: 1px;
+	background-color: var(--color-white-50);
+	bottom: 0rem;
+
+	@include respond(tab-land) {
+		width: calc(100% - 12.8rem);
+	}
+	@include respond(tab-port) {
+		width: calc(100% - 8rem);
+	}
+}
+
+.logo-box {
+	cursor: pointer;
+}

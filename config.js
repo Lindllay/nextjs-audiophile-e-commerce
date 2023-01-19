@@ -1,6 +1,7 @@
 const respond = {
 	mobile: "37.5em",
-	tablet: "69em",
+	tabPort: "56.25em",
+	tabLand: "68.75em",
 };
 
 export default respond;

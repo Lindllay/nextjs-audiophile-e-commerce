@@ -23,7 +23,7 @@ const OthersItem = (props) => {
 					alt="product-image"
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet={refractoredImgSrc.tablet}
 					alt="product-image"
 				/>
@@ -33,11 +33,6 @@ const OthersItem = (props) => {
 			<NavButton href={`/${othersCategory}/${props.slug}`} className="btn--1">
 				See product
 			</NavButton>
-			{/* <Button className="btn--1">
-				<Link href={`/${othersCategory}/${props.slug}`} className={styles.link}>
-					See product
-				</Link>
-			</Button> */}
 		</li>
 	);
 };

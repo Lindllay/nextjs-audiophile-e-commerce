@@ -93,7 +93,7 @@ body {
   --color-raw-sienna: #d87d4a;
   --color-tacao: #fbaf85;
   --color-black: #101010;
-  --color-black-background: #141414;
+  --color-black-background: rgb(25, 25, 25);
   --color-grey-border: #96969633;
   --color-white-50: rgb(125, 125, 125);
   --color-white-75: rgba(255, 255, 255, 0.75);
@@ -192,4 +192,11 @@ body {
 
 .bg-checkout {
   background-color: var(--color-grey) !important;
+}
+
+.reference {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  top: 0;
 }/*# sourceMappingURL=globals.css.map */

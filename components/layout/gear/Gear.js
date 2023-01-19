@@ -1,4 +1,4 @@
-import styles from "./Gear.module.scss";
+import styles from "./_Gear.module.scss";
 import respond from "../../../config";
 
 const Gear = (props) => {
@@ -24,7 +24,7 @@ const Gear = (props) => {
 					alt="gearImg"
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet="/assets/shared/tablet/image-best-gear.jpg"
 					alt="gearImg"
 				/>

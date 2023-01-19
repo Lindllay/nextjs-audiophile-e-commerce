@@ -42,7 +42,7 @@ const Gallery = (props) => {
 					alt={props.name}
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet={refractoredImgSrc.first.tablet}
 					alt={props.name}
 				/>
@@ -55,7 +55,7 @@ const Gallery = (props) => {
 					alt={props.name}
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet={refractoredImgSrc.second.tablet}
 					alt={props.name}
 				/>
@@ -68,7 +68,7 @@ const Gallery = (props) => {
 					alt={props.name}
 				/>
 				<source
-					media={`(max-width: ${respond.tablet})`}
+					media={`(max-width: ${respond.tabLand})`}
 					srcSet={refractoredImgSrc.third.tablet}
 					alt={props.name}
 				/>

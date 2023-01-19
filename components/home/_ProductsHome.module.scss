@@ -5,6 +5,10 @@
 	flex-direction: column;
 	gap: 4.8rem;
 	margin-bottom: 20rem;
+
+	@include respond(tab-land) {
+		margin-bottom: 9.6rem;
+	}
 }
 
 .zx9-container {
@@ -16,7 +20,7 @@
 	position: relative;
 	border-radius: 0.8rem;
 
-	@include respond(tablet) {
+	@include respond(tab-land) {
 		flex-direction: column;
 		height: 69rem;
 		align-items: center;
@@ -28,14 +32,14 @@
 	margin-top: 13.5rem;
 	z-index: 2;
 
-	@include respond(tablet) {
+	@include respond(tab-land) {
 		margin-top: 2rem;
 	}
 }
 
 .figure img {
 	width: 36rem;
-	@include respond(tablet) {
+	@include respond(tab-land) {
 		width: 23rem;
 	}
 }
@@ -47,7 +51,7 @@
 	z-index: 1;
 	width: 80%;
 
-	@include respond(tablet) {
+	@include respond(tab-land) {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -70%);

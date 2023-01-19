@@ -1,0 +1,90 @@
+@import "../../styles/mixins";
+
+.item {
+	display: flex;
+	gap: 12.5rem;
+
+	@include respond(tab-land) {
+		gap: 5.2rem;
+	}
+}
+
+.picture {
+	height: 100%;
+	width: 100%;
+	flex-basis: 49%;
+
+	@include respond(tab-land) {
+		gap: 5.2rem;
+		flex-basis: 40%;
+	}
+}
+
+.item:nth-child(even) .picture {
+	order: 2;
+
+	@include respond(tab-land) {
+		order: unset;
+	}
+}
+
+.picture img {
+	height: 100%;
+	width: 100%;
+	border-radius: 0.8rem;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	flex: 1;
+
+	@include respond(tab-land) {
+		align-items: center;
+	}
+}
+
+.heading-2 {
+	font-size: 4rem;
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	line-height: 4.4rem;
+	margin-bottom: 3.2rem;
+}
+
+.overline {
+	font-size: 1.4rem;
+	font-weight: 400;
+	letter-spacing: 10px;
+	line-height: 1.9rem;
+	text-transform: uppercase;
+	color: var(--color-raw-sienna);
+	margin-bottom: 1.6rem;
+}
+
+.price {
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 1.29px;
+	line-height: 2.4rem;
+	margin-bottom: 4rem;
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	margin-bottom: 3.2rem;
+}
+
+.actions {
+	display: flex;
+	gap: 1.6rem;
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,14 +1,14 @@
-import styles from "./Products.module.css";
-import Product from "./Product";
+import styles from "./_Products.module.scss";
+import ProductCategory from "./ProductCategory";
 
 const Products = (props) => {
 	return (
 		<div className={styles.products}>
 			<ul className={styles.items}>
 				{props.data.map((product) => (
-					<Product
+					<ProductCategory
 						slug={product.slug}
-						image={product.image}
+						image={product.categoryImage}
 						description={product.description}
 						id={product.id}
 						key={product.id}
