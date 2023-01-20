@@ -14,6 +14,7 @@ import respond from "../../../config";
 const Header = (props) => {
 	const [isNarrowScreen, setIsNarrowScreen] = useState(false);
 	const [isHeaderReduced, setIsHeaderReduced] = useState(false);
+	const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 	const [isMobileNavOpened, setIsMobileNavOpened] = useState(false);
 	const [isCartShowed, setIsCartShowed] = useState(false);
 	useDisableBodyScroll(isCartShowed);
@@ -39,7 +40,9 @@ const Header = (props) => {
 	const hasUnderline = !props.underline;
 	const classes = `${styles.header} ${hasUnderline ? styles.underline : ""} ${
 		isHeaderReduced && styles.reduce
-	} ${isMobileNavOpened && styles.increaseZIndex}`;
+	} ${isMobileNavOpened && styles.increaseZIndex} ${
+		!isHeaderVisible && styles.hidden
+	}`;
 
 	useEffect(() => {
 		const mediaWatcher = window.matchMedia(`(max-width: ${respond.tabLand})`);
@@ -63,14 +66,22 @@ const Header = (props) => {
 		};
 
 		const callback = (entry) => {
-			console.log(entry[0]);
-			setIsHeaderReduced(!entry[0].isIntersecting);
+			console.log(entry);
+			if (entry[0].target === footer && entry[0].isIntersecting)
+				setIsHeaderVisible(false);
+			if (entry[0].target === footer && !entry[0].isIntersecting)
+				setIsHeaderVisible(true);
+			if (entry[0].target !== footer)
+				setIsHeaderReduced(!entry[0].isIntersecting);
 		};
 
-		const observer = new IntersectionObserver(callback, options);
-		const target = document.querySelector(".reference");
+		const topObserver = new IntersectionObserver(callback, options);
+		const bottomObserver = new IntersectionObserver(callback, options);
+		const pageTop = document.querySelector(".reference");
+		const footer = document.getElementById("footer");
 
-		observer.observe(target);
+		topObserver.observe(pageTop);
+		bottomObserver.observe(footer);
 	}, []);
 
 	return (

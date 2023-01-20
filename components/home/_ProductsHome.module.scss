@@ -26,6 +26,9 @@
 		align-items: center;
 		text-align: center;
 	}
+	@include respond(tab-port) {
+		height: 60rem;
+	}
 }
 
 .figure {
@@ -35,12 +38,18 @@
 	@include respond(tab-land) {
 		margin-top: 2rem;
 	}
+	@include respond(tab-port) {
+		margin-top: 5rem;
+	}
 }
 
 .figure img {
 	width: 36rem;
 	@include respond(tab-land) {
 		width: 23rem;
+	}
+	@include respond(tab-port) {
+		width: 18rem;
 	}
 }
 
@@ -57,6 +66,10 @@
 		transform: translate(-50%, -70%);
 		width: 100%;
 	}
+	@include respond(tab-port) {
+		top: 30%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 .zx9-container div {
@@ -66,6 +79,10 @@
 	flex-direction: column;
 	gap: 2.4rem;
 	align-items: center;
+
+	@include respond(tab-port) {
+		max-width: 30rem;
+	}
 }
 
 .heading-1 {
@@ -74,6 +91,11 @@
 	letter-spacing: 2px;
 	line-height: 5.8rem;
 	color: var(--color-light-grey);
+	@include respond(tab-port) {
+		font-size: 3.6rem;
+		margin-top: 3.2rem;
+		line-height: 4rem;
+	}
 }
 
 .paragraph {
@@ -93,6 +115,11 @@
 	display: flex;
 	align-items: center;
 	border-radius: 0.8rem;
+
+	@include respond(mobile) {
+		background-image: url(../../public/assets/home/mobile/image-speaker-zx7.jpg);
+		background-position: center;
+	}
 }
 
 .zx7-container div {
@@ -102,6 +129,10 @@
 	justify-content: center;
 	gap: 3.2rem;
 	margin-left: 9.5rem;
+
+	@include respond(mobile) {
+		margin-left: 2.4rem;
+	}
 }
 
 .heading-4 {
@@ -115,6 +146,15 @@
 	height: 32rem;
 	display: flex;
 	gap: 3rem;
+
+	@include respond(tab-port) {
+		flex-direction: column;
+		height: 50rem;
+		gap: 2.4rem;
+	}
+	@include respond(mobile) {
+		height: 45rem;
+	}
 }
 
 .yx1-container figure {
@@ -136,6 +176,10 @@
 	align-items: flex-start;
 	padding-left: 7.5rem;
 	gap: 3.2rem;
+
+	@include respond(mobile) {
+		padding-left: 2.4rem;
+	}
 }
 
 .link {

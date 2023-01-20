@@ -1,5 +1,5 @@
 import Modal from "../UI/Modal";
-import styles from "./Cart.module.css";
+import styles from "./_Cart.module.scss";
 import CartItem from "./CartItem";
 import NavButton from "../UI/NavButton";
 import { useContext } from "react";

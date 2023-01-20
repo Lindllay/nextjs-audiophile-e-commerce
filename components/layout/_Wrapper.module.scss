@@ -13,4 +13,7 @@
 	@include respond(tab-port) {
 		padding: 0 4rem;
 	}
+	@include respond(mobile) {
+		padding: 0 2.4rem;
+	}
 }

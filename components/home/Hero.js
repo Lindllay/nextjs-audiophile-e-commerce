@@ -2,9 +2,8 @@ import styles from "./_Hero.module.scss";
 import Wrapper from "../../components/layout/Wrapper";
 import respond from "../../config";
 import NavButton from "../UI/NavButton";
-import { forwardRef } from "react";
 
-const Hero = forwardRef((props, ref) => {
+const Hero = (props) => {
 	return (
 		<section className={styles.hero}>
 			<picture className={styles.picture}>
@@ -26,16 +25,15 @@ const Hero = forwardRef((props, ref) => {
 			</picture>
 
 			<Wrapper className={styles["wrapper-hero"]}>
-				<div className={`${styles.content}`} ref={ref} id="hero">
-					<p className="overline">New product</p>
-					<h1 className="heading-1">
+				<div className={`${styles.content}`} id="hero">
+					<p className={styles.overline}>New product</p>
+					<h1 className={styles["heading-1"]}>
 						XX99 Mark II
 						<br /> Headphones
 					</h1>
-					<p className="paragraph font-white75">
-						Experience natural, lifelike audio and exceptional
-						<br /> build quality made for the passionate music
-						<br /> enthusiast.
+					<p className={styles.paragraph}>
+						Experience natural, lifelike audio and exceptional build quality
+						made for the passionate music enthusiast.
 					</p>
 
 					<NavButton
@@ -48,6 +46,6 @@ const Hero = forwardRef((props, ref) => {
 			</Wrapper>
 		</section>
 	);
-});
+};
 
 export default Hero;

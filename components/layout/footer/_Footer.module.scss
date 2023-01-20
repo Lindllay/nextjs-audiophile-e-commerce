@@ -15,6 +15,15 @@
 	@include respond(tab-land) {
 		grid-template-rows: repeat(4, min-content);
 	}
+	@include respond(mobile) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, min-content);
+		padding: 5.2rem 0 4.8rem 0;
+
+		column-gap: 0rem;
+		justify-items: center;
+		text-align: center;
+	}
 }
 
 .logo {
@@ -35,6 +44,11 @@
 		grid-row: 3;
 		grid-column: 1 / span 2;
 	}
+	@include respond(mobile) {
+		grid-row: 3;
+		grid-column: 1;
+		margin-bottom: 4.8rem;
+	}
 }
 
 .copyright {
@@ -48,6 +62,9 @@
 	@include respond(tab-land) {
 		grid-row: 4;
 	}
+	@include respond(mobile) {
+		margin-bottom: 4.8rem;
+	}
 }
 
 .navigation {
@@ -58,6 +75,11 @@
 		grid-row: 2;
 		justify-self: flex-start;
 		margin-bottom: 3.2rem;
+	}
+	@include respond(mobile) {
+		grid-column: 1;
+		justify-self: center;
+		margin-bottom: 4.8rem;
 	}
 }
 
@@ -71,6 +93,11 @@
 	@include respond(tab-land) {
 		grid-column: 2;
 		grid-row: 4;
+	}
+	@include respond(mobile) {
+		grid-column: 1;
+		grid-row: 5;
+		justify-self: center;
 	}
 }
 
@@ -99,6 +126,10 @@
 	display: flex;
 	gap: 3.4rem;
 	text-decoration: none;
+	@include respond(mobile) {
+		flex-direction: column;
+		gap: 1.6rem;
+	}
 }
 
 .nav-item {

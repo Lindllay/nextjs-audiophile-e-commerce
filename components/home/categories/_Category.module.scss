@@ -1,5 +1,7 @@
+@import "../../../styles/mixins";
+
 .category {
-	width: 35rem;
+	width: 100%;
 	height: 20rem;
 	background-color: var(--color-grey);
 	border-radius: 0.8rem;
@@ -13,6 +15,11 @@
 
 	text-decoration: none;
 	color: inherit;
+}
+.category:not(:last-child) {
+	@include respond(tab-port) {
+		margin-bottom: 12.6rem;
+	}
 }
 
 .category button {

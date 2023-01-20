@@ -9,7 +9,7 @@
 	width: 100%;
 	background-color: rgb(25, 25, 25);
 	height: 9.6rem;
-	transition: all 0.1s;
+	transition: all 0.2s ease-out;
 }
 
 .header.reduce {
@@ -47,6 +47,9 @@
 	@include respond(tab-port) {
 		width: calc(100% - 8rem);
 	}
+	@include respond(mobile) {
+		width: calc(100% - 4.8rem);
+	}
 }
 
 .logo-box {
@@ -59,4 +62,8 @@
 
 .icon {
 	justify-self: flex-end;
+}
+
+.hidden {
+	transform: translateY(-10rem);
 }

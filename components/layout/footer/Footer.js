@@ -8,7 +8,7 @@ const Footer = (props) => {
 	const router = useRouter();
 
 	return (
-		<section className={styles["footer-background"]}>
+		<section className={styles["footer-background"]} id="footer">
 			<Wrapper>
 				<footer className={styles.footer}>
 					<img

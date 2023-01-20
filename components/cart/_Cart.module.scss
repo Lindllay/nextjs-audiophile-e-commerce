@@ -1,9 +1,16 @@
+@import "../../styles/mixins";
+
 .cart {
 	width: 40rem;
 	min-height: 15rem;
 	/* max-height: 50rem; */
 	top: 3rem;
 	right: 10rem;
+
+	@include respond(mobile) {
+		width: 90vw;
+		right: 5%;
+	}
 }
 
 .quantity-container {

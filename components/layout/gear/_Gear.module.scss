@@ -20,6 +20,13 @@
 		padding-inline: 9.6rem;
 		text-align: center;
 	}
+
+	@include respond(tab-port) {
+		padding-inline: 6.4rem;
+	}
+	@include respond(mobile) {
+		padding-inline: 0rem;
+	}
 }
 
 .heading-2 {

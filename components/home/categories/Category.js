@@ -1,4 +1,4 @@
-import styles from "./Category.module.css";
+import styles from "./_Category.module.scss";
 import Button from "../../UI/Button";
 import Link from "next/link";
 
