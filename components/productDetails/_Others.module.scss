@@ -1,5 +1,11 @@
+@import "../../styles/mixins";
+
 .others {
 	margin-bottom: 6.4rem;
+
+	@include respond(tab-land) {
+		margin-bottom: 9.6rem;
+	}
 }
 
 .others-list {

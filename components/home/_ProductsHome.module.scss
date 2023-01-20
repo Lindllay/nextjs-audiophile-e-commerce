@@ -7,7 +7,7 @@
 	margin-bottom: 20rem;
 
 	@include respond(tab-land) {
-		margin-bottom: 9.6rem;
+		margin-block: 9.6rem;
 	}
 }
 

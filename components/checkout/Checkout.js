@@ -1,4 +1,4 @@
-import styles from "./Checkout.module.css";
+import styles from "./_Checkout.module.scss";
 import CheckoutForm from "./CheckoutForm";
 import Summary from "./Summary";
 

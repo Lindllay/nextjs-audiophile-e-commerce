@@ -1,4 +1,4 @@
-import styles from "./Others.module.css";
+import styles from "./_Others.module.scss";
 import OthersItem from "./OthersItem";
 
 const Others = (props) => {

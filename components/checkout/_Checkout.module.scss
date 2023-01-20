@@ -1,0 +1,11 @@
+@import "../../styles/mixins";
+.content {
+	display: flex;
+	gap: 3rem;
+	padding-block: 14rem;
+
+	@include respond(tab-land) {
+		flex-direction: column;
+		padding-bottom: 4.8rem;
+	}
+}

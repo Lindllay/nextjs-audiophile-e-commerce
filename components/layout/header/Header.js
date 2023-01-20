@@ -7,6 +7,7 @@ import Wrapper from "../Wrapper";
 import { useEffect, useState } from "react";
 import useDisableBodyScroll from "../../utils/hooks/useDisableBodyScroll";
 import Cart from "../../../components/cart/Cart";
+import { useCallback } from "react";
 
 import respond from "../../../config";
 
@@ -26,8 +27,9 @@ const Header = (props) => {
 	};
 
 	const openMobileNavHandler = () => {
-		setIsMobileNavOpened(true);
+		setIsMobileNavOpened((prev) => !prev);
 	};
+
 	const closeMobileNavHandler = () => {
 		setIsMobileNavOpened(false);
 	};
