@@ -7,12 +7,15 @@
 	gap: 3rem;
 
 	@include respond(tab-land) {
-		padding: 12.6rem 0 0 0;
-		margin-bottom: 6.4rem;
+		padding: 15.6rem 0 0 0;
+		margin-bottom: 12rem;
 	}
 
 	@include respond(tab-port) {
 		flex-direction: column;
 		align-items: center;
+	}
+	@include respond(mobile) {
+		gap: 0;
 	}
 }

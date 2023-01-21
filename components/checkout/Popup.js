@@ -1,4 +1,4 @@
-import styles from "./Popup.module.css";
+import styles from "./_Popup.module.scss";
 import Modal from "../UI/Modal";
 import { useContext } from "react";
 import CartContext from "../store/cart-context";

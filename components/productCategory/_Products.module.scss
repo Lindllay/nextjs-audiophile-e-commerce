@@ -7,6 +7,9 @@
 		margin-top: 12rem;
 		margin-bottom: 5rem;
 	}
+	@include respond(tab-land) {
+		margin-top: 6.4rem;
+	}
 }
 
 .items {

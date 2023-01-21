@@ -1,5 +1,6 @@
 import styles from "./_Footer.module.scss";
 import Wrapper from "../Wrapper";
+import Logo from "../../UI/Logo";
 import { useRouter } from "next/router";
 
 import Link from "next/link";
@@ -11,11 +12,7 @@ const Footer = (props) => {
 		<section className={styles["footer-background"]} id="footer">
 			<Wrapper>
 				<footer className={styles.footer}>
-					<img
-						src="/assets/shared/desktop/logo.svg"
-						alt="logo"
-						className={styles.logo}
-					/>
+					<Logo className={styles.logo} />
 					<p className={styles.paragraph}>
 						Audiophile is an all in one stop to fulfill your audio needs. We're
 						a small team of music lovers and sound specialists who are devoted

@@ -45,6 +45,9 @@
 		text-align: center;
 	}
 	@include respond(mobile) {
+		height: 100vh;
+		margin-top: 3.2rem;
+
 		gap: unset;
 	}
 }

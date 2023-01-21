@@ -1,8 +1,12 @@
+@import "../../styles/mixins";
+
 .form {
 	background-color: white;
 	padding: 5.4rem 4.8rem;
 	border-radius: 0.8rem;
 	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 .form-control {
@@ -16,6 +20,10 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 0.6rem;
+
+	@include respond(mobile) {
+		margin-top: 1.2rem;
+	}
 }
 .label.error {
 	color: red;
@@ -53,27 +61,53 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2.4rem 1.6rem;
+
+	@include respond(mobile) {
+		grid-template-columns: 1fr;
+		gap: 1.6rem;
+	}
 }
 
 .address {
 	grid-column: 1 / span 2;
+	@include respond(mobile) {
+		grid-column: 1;
+	}
 }
 
 .e-money-radio {
 	grid-column: 2;
 	grid-row: 1;
+	@include respond(mobile) {
+		grid-column: 1;
+		grid-row: 2;
+	}
 }
 .cash-radio {
 	grid-column: 2;
 	grid-row: 2;
+
+	@include respond(mobile) {
+		grid-column: 1;
+		grid-row: 3;
+	}
 }
 .e-money-number {
 	grid-column: 1;
 	grid-row: 3;
+
+	@include respond(mobile) {
+		grid-column: 1;
+		grid-row: 4;
+	}
 }
 .e-money-pin {
 	grid-column: 2;
 	grid-row: 3;
+	@include respond(mobile) {
+		grid-column: 1;
+		grid-row: 5;
+	}
 }
 
 .cash-on-delivery {
@@ -81,6 +115,13 @@
 	align-items: center;
 	gap: 3.2rem;
 	margin-top: 3rem;
+	@include respond(mobile) {
+		flex-direction: column;
+		margin-top: 4.8rem;
+		max-width: 35rem;
+		align-self: center;
+		text-align: center;
+	}
 }
 
 .icon-cash {

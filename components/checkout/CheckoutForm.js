@@ -1,4 +1,4 @@
-import styles from "./CheckoutForm.module.css";
+import styles from "./_CheckoutForm.module.scss";
 import * as yup from "yup";
 import { useState } from "react";
 import Popup from "./Popup";

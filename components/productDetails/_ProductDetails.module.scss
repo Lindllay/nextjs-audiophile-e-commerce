@@ -3,9 +3,15 @@
 .item {
 	display: flex;
 	gap: 12.5rem;
+	margin-block: 16rem;
 
 	@include respond(tab-land) {
 		gap: 5.2rem;
+	}
+	@include respond(mobile) {
+		flex-direction: column;
+		margin-bottom: 8.8rem;
+		gap: 3.2rem;
 	}
 }
 
@@ -42,7 +48,7 @@
 	flex: 1;
 
 	@include respond(tab-land) {
-		align-items: center;
+		align-items: unset;
 	}
 }
 
@@ -52,6 +58,10 @@
 	letter-spacing: 1.5px;
 	line-height: 4.4rem;
 	margin-bottom: 3.2rem;
+	@include respond(mobile) {
+		font-size: 2.8rem;
+		margin-bottom: 2.4rem;
+	}
 }
 
 .overline {
@@ -62,6 +72,9 @@
 	text-transform: uppercase;
 	color: var(--color-raw-sienna);
 	margin-bottom: 1.6rem;
+	@include respond(mobile) {
+		margin-bottom: 2.4rem;
+	}
 }
 
 .price {

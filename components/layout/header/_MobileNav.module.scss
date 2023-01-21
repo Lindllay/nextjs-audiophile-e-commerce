@@ -10,13 +10,14 @@
 	transition: all 0.1s;
 
 	@include respond(tab-port) {
-		height: 65vh;
+		height: 75vh;
 		overflow: scroll;
 	}
 }
 
 .mobileNav > * section {
-	padding-top: 9.6rem;
+	padding-top: 12.6rem;
+	margin-bottom: 0rem;
 }
 
 .mobileNav > * a {

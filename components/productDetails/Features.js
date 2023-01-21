@@ -1,4 +1,4 @@
-import styles from "./Features.module.css";
+import styles from "./_Features.module.scss";
 import ListItem from "./ListItem";
 
 const Features = (props) => {

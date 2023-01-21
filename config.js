@@ -1,5 +1,5 @@
 const respond = {
-	mobile: "37.5em",
+	mobile: "41.75em",
 	tabPort: "56.25em",
 	tabLand: "68.75em",
 };

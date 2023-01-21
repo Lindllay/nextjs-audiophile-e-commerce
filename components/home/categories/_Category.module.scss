@@ -31,15 +31,24 @@
 	left: 50%;
 	translate: -50%;
 	bottom: 5rem;
+	@include respond(mobile) {
+		bottom: 8rem;
+	}
 }
 
 .figure img {
 	width: 25rem;
 	transition: all 0.2s;
+	@include respond(mobile) {
+		width: 20rem;
+	}
 }
 
 .category:hover figure img {
 	width: 27rem;
+	@include respond(mobile) {
+		width: 22rem;
+	}
 }
 
 .heading-6 {

@@ -1,4 +1,4 @@
-import styles from "./Gallery.module.css";
+import styles from "./_Gallery.module.scss";
 import respond from "../../config";
 
 const Gallery = (props) => {
@@ -13,25 +13,6 @@ const Gallery = (props) => {
 		};
 		refractoredImgSrc = { ...refractoredImgSrc, ...img };
 	}
-	// console.log(refractoredImgSrc);
-
-	// const refractoredImgSrc = {
-	// 	first: {
-	// 		mobile: props.gallery.first.mobile.replace(".", ""),
-	// 		tablet: props.gallery.first.tablet.replace(".", ""),
-	// 		desktop: props.gallery.first.desktop.replace(".", ""),
-	// 	},
-	// 	second: {
-	// 		mobile: props.gallery.first.mobile.replace(".", ""),
-	// 		tablet: props.gallery.first.tablet.replace(".", ""),
-	// 		desktop: props.gallery.first.desktop.replace(".", ""),
-	// 	},
-	// 	third: {
-	// 		mobile: props.gallery.first.mobile.replace(".", ""),
-	// 		tablet: props.gallery.first.tablet.replace(".", ""),
-	// 		desktop: props.gallery.first.desktop.replace(".", ""),
-	// 	},
-	// };
 
 	return (
 		<section className={styles.gallery}>

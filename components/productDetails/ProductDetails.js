@@ -39,9 +39,7 @@ const ProductDetails = (props) => {
 	};
 
 	return (
-		<li
-			className={`${styles.item} ${props.margin ? "block-margin-large" : ""}`}
-		>
+		<li className={styles.item}>
 			<Bump bump={bump} />
 			<picture className={styles.picture}>
 				<source

@@ -6,12 +6,20 @@
 	@include respond(tab-land) {
 		margin-bottom: 9.6rem;
 	}
+	@include respond(tab-land) {
+		margin-bottom: 6.4rem;
+	}
 }
 
 .others-list {
 	display: flex;
 	gap: 3rem;
 	list-style: none;
+
+	@include respond(mobile) {
+		flex-direction: column;
+		gap: 5.6rem;
+	}
 }
 
 .heading-3 {
@@ -21,4 +29,8 @@
 	line-height: 3.6rem;
 	margin-bottom: 6.4rem;
 	text-align: center;
+
+	@include respond(mobile) {
+		font-size: 2.4rem;
+	}
 }

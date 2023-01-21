@@ -1,4 +1,5 @@
 import styles from "./_Header.module.scss";
+import Logo from "../../UI/Logo";
 import Navigation from "./Navigation";
 import MobileNav from "./MobileNav";
 import HamburgerIcon from "./HamburgerIcon";
@@ -7,7 +8,6 @@ import Wrapper from "../Wrapper";
 import { useEffect, useState } from "react";
 import useDisableBodyScroll from "../../utils/hooks/useDisableBodyScroll";
 import Cart from "../../../components/cart/Cart";
-import { useCallback } from "react";
 
 import respond from "../../../config";
 
@@ -93,11 +93,7 @@ const Header = (props) => {
 					isNarrowScreen && styles.mobile
 				}`}
 			>
-				{!isNarrowScreen && (
-					<div className={styles["logo-box"]}>
-						<img src="/assets/shared/desktop/logo.svg" alt="logo" />
-					</div>
-				)}
+				{!isNarrowScreen && <Logo />}
 				{!isNarrowScreen && <Navigation />}
 				{isNarrowScreen && (
 					<>
@@ -106,9 +102,7 @@ const Header = (props) => {
 							className={styles.hamburger}
 						/>
 
-						<div className={`${styles["logo-box"]}`}>
-							<img src="/assets/shared/desktop/logo.svg" alt="logo" />
-						</div>
+						<Logo />
 					</>
 				)}
 				{isMobileNavOpened && isNarrowScreen && (
