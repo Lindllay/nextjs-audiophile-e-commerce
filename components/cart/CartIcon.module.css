@@ -1,9 +1,9 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
 	align-items: center;
 	position: relative;
+	justify-self: flex-end;
 }
 .icon {
 	cursor: pointer;

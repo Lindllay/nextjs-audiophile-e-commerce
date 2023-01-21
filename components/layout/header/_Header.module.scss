@@ -28,7 +28,7 @@
 }
 
 .wrapper-header.mobile {
-	grid-template-columns: max-content 1fr min-content;
+	grid-template-columns: min-content min-content 1fr;
 }
 
 .underline .wrapper-header::after {
