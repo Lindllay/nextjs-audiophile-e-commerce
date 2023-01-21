@@ -1,8 +1,33 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
 .icon {
 	cursor: pointer;
 	transition: all 0.2s;
 	stroke: transparent;
 	fill: white;
+}
+
+.quantity {
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	content: "";
+	height: 1.8rem;
+	width: 1.8rem;
+	border-radius: 50%;
+	background-color: var(--color-raw-sienna);
+	left: 2.4rem;
+	top: -1rem;
+	z-index: -1;
+	color: white;
+	font-weight: 600;
+	font-size: 1.2rem;
 }
 
 .icon:hover {

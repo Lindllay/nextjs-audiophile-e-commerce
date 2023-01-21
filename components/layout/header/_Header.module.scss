@@ -13,7 +13,7 @@
 }
 
 .header.reduce {
-	height: 6rem;
+	height: 6.4rem;
 }
 .header.increaseZIndex {
 	z-index: 9999999;
@@ -24,11 +24,11 @@
 	align-items: center;
 	width: 100%;
 	position: relative;
-	grid-template-columns: 1.2fr 1fr 1fr;
+	grid-template-columns: min-content 1fr min-content;
 }
 
 .wrapper-header.mobile {
-	grid-template-columns: max-content 1fr 1fr;
+	grid-template-columns: max-content 1fr min-content;
 }
 
 .underline .wrapper-header::after {
