@@ -65,7 +65,6 @@ const Header = (props) => {
 		};
 
 		const callback = (entry) => {
-			console.log(entry);
 			if (entry[0].target === footer && entry[0].isIntersecting)
 				setIsHeaderVisible(false);
 			if (entry[0].target === footer && !entry[0].isIntersecting)

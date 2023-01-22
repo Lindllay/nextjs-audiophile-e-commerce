@@ -10,7 +10,6 @@ const CartIcon = (props) => {
 			: cartCtx.items.reduce((acc, cur) => acc + cur.amount, 0);
 
 	const classes = `${styles.icon} ${props.className}`;
-	console.log(itemsAmount);
 	return (
 		<div className={styles.wrapper}>
 			{itemsAmount && <div className={styles.quantity}>{itemsAmount}</div>}
