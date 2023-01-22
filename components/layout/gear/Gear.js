@@ -1,7 +1,7 @@
 import styles from "./_Gear.module.scss";
 import respond from "../../../config";
 
-const Gear = (props) => {
+const Gear = () => {
 	return (
 		<section className={styles.gear}>
 			<div className={styles.content}>

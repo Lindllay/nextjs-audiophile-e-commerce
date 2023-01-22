@@ -2,10 +2,9 @@ import styles from "./_Footer.module.scss";
 import Wrapper from "../Wrapper";
 import Logo from "../../UI/Logo";
 import { useRouter } from "next/router";
-
 import Link from "next/link";
 
-const Footer = (props) => {
+const Footer = () => {
 	const router = useRouter();
 
 	return (

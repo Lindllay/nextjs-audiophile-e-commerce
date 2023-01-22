@@ -1,7 +1,7 @@
 import styles from "./_ProductsHome.module.scss";
 import NavButton from "../UI/NavButton";
 
-const ProductsHome = (props) => {
+const ProductsHome = () => {
 	return (
 		<section className={styles.container}>
 			<div className={styles["zx9-container"]}>

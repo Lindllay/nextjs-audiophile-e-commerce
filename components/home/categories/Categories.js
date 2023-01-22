@@ -1,6 +1,5 @@
 import styles from "./_Categories.module.scss";
 import Category from "./Category";
-import Link from "next/link";
 
 const Categories = (props) => {
 	return (

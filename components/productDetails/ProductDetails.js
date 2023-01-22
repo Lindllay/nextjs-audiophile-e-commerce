@@ -1,12 +1,11 @@
 import styles from "./_ProductDetails.module.scss";
 import Button from "../UI/Button";
 import CounterButton from "../UI/CounterButton";
-import respond from "../../config";
 import NavButton from "../UI/NavButton";
 import Bump from "../UI/Bump";
-
 import { useContext, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
+import respond from "../../config";
 
 const ProductDetails = (props) => {
 	const [bump, setBump] = useState(false);

@@ -1,7 +1,6 @@
-import { forwardRef, useRef } from "react";
 import styles from "./RadioInput.module.css";
 
-const RadioInput = forwardRef((props, ref) => {
+const RadioInput = (props) => {
 	const classes = `${styles["form-control"]} ${props.className}`;
 
 	const passPaymentMethod = (event) => {
@@ -17,7 +16,6 @@ const RadioInput = forwardRef((props, ref) => {
 				name={props.name}
 				value={props.value}
 				defaultChecked={props.defaultChecked}
-				ref={ref}
 				onClick={passPaymentMethod}
 			/>
 			<label htmlFor={props.id} className={styles.label}>
@@ -26,6 +24,6 @@ const RadioInput = forwardRef((props, ref) => {
 			</label>
 		</div>
 	);
-});
+};
 
 export default RadioInput;

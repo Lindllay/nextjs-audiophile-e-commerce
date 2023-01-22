@@ -1,10 +1,10 @@
 import styles from "./_Summary.module.scss";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import CartContext from "../store/cart-context";
 import SummaryItem from "./SummaryItem";
 import Button from "../UI/Button";
 
-const Summary = (props) => {
+const Summary = () => {
 	const CartCtx = useContext(CartContext);
 	const hasItems = CartCtx.items.length > 0;
 

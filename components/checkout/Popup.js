@@ -1,13 +1,12 @@
 import styles from "./_Popup.module.scss";
 import Modal from "../UI/Modal";
-import { useContext } from "react";
+import Button from "../UI/Button";
 import CartContext from "../store/cart-context";
 import SummaryItem from "./SummaryItem";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useRouter } from "next/router";
-import Button from "../UI/Button";
 
-const Popup = (props) => {
+const Popup = () => {
 	const router = useRouter();
 	const cartCtx = useContext(CartContext);
 	const [showAllItems, setShowAllItems] = useState(false);

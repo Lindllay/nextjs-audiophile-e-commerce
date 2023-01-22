@@ -2,8 +2,6 @@ import "../styles/globals.css";
 import Header from "../components/layout/header/Header";
 import Footer from "../components/layout/footer/Footer";
 import useScrollRestoration from "../components/utils/hooks/useScrollRestoration";
-import useDisableBodyScroll from "../components/utils/hooks/useDisableBodyScroll";
-import { useState } from "react";
 import CartProvider from "../components/store/CartProvider";
 import { useRouter } from "next/router";
 

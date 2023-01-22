@@ -8,7 +8,6 @@ import Wrapper from "../Wrapper";
 import { useEffect, useState } from "react";
 import useDisableBodyScroll from "../../utils/hooks/useDisableBodyScroll";
 import Cart from "../../../components/cart/Cart";
-
 import respond from "../../../config";
 
 const Header = (props) => {

@@ -1,7 +1,7 @@
 import styles from "./_CheckoutForm.module.scss";
 import * as yup from "yup";
-import { useState } from "react";
 import Popup from "./Popup";
+import { useState } from "react";
 import useDisableBodyScroll from "../utils/hooks/useDisableBodyScroll";
 
 import { useFormik } from "formik";
@@ -15,7 +15,6 @@ const CheckoutForm = (props) => {
 	};
 
 	const onSubmit = (e) => {
-		console.log(e);
 		setIsModalShowed(true);
 	};
 

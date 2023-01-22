@@ -5,13 +5,11 @@ import ProductsHome from "../components/home/ProductsHome";
 
 import { Fragment } from "react";
 import Gear from "../components/layout/gear/Gear";
-import { useRef } from "react";
-import { forwardRef } from "react";
 
-const Home = forwardRef((props, ref) => {
+const Home = () => {
 	return (
 		<Fragment>
-			<Hero ref={ref} />
+			<Hero />
 			<Content>
 				<Categories />
 				<ProductsHome />
@@ -19,6 +17,6 @@ const Home = forwardRef((props, ref) => {
 			</Content>
 		</Fragment>
 	);
-});
+};
 
 export default Home;

@@ -1,9 +1,9 @@
 import styles from "./_Hero.module.scss";
 import Wrapper from "../../components/layout/Wrapper";
-import respond from "../../config";
 import NavButton from "../UI/NavButton";
+import respond from "../../config";
 
-const Hero = (props) => {
+const Hero = () => {
 	return (
 		<section className={styles.hero}>
 			<picture className={styles.picture}>

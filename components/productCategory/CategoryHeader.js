@@ -1,5 +1,4 @@
 import styles from "./CategoryHeader.module.css";
-import Wrapper from "../layout/Wrapper";
 
 const CategoryHeader = (props) => {
 	return (
