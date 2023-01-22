@@ -15,7 +15,10 @@ const Category = (props) => {
 			<h6 className={styles["heading-6"]}>{props.categoryName}</h6>
 			<Button className="btn--shop">
 				Shop
-				<img src="/assets/shared/desktop/icon-arrow-right.svg" />
+				<img
+					src="/assets/shared/desktop/icon-arrow-right.svg"
+					alt="icon-right"
+				/>
 			</Button>
 		</Link>
 	);
