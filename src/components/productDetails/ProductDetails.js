@@ -5,7 +5,7 @@ import NavButton from "../UI/NavButton";
 import Bump from "../UI/Bump";
 import { useContext, useRef, useState } from "react";
 import CartContext from "../store/cart-context";
-import respond from "../../config";
+import respond from "../../data/config";
 
 const ProductDetails = (props) => {
 	const [bump, setBump] = useState(false);

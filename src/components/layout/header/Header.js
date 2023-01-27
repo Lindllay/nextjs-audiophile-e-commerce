@@ -6,9 +6,9 @@ import HamburgerIcon from "./HamburgerIcon";
 import CartIcon from "../../cart/CartIcon";
 import Wrapper from "../Wrapper";
 import { useEffect, useState } from "react";
-import useDisableBodyScroll from "../../utils/hooks/useDisableBodyScroll";
+import useDisableBodyScroll from "../../hooks/useDisableBodyScroll";
 import Cart from "../../../components/cart/Cart";
-import respond from "../../../config";
+import respond from "../../../data/config";
 
 const Header = (props) => {
 	const [isNarrowScreen, setIsNarrowScreen] = useState(false);

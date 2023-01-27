@@ -1,5 +1,5 @@
 import styles from "./_Gear.module.scss";
-import respond from "../../../config";
+import respond from "../../../data/config";
 
 const Gear = () => {
 	return (

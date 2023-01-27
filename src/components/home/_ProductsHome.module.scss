@@ -107,7 +107,7 @@
 }
 
 .zx7-container {
-	background-image: url(../../public/assets/home/desktop/image-speaker-zx7.jpg);
+	background-image: url(../../../public/assets/home/desktop/image-speaker-zx7.jpg);
 	background-size: cover;
 	background-position-x: center;
 	background-repeat: no-repeat;
@@ -117,7 +117,7 @@
 	border-radius: 0.8rem;
 
 	@include respond(mobile) {
-		background-image: url(../../public/assets/home/mobile/image-speaker-zx7.jpg);
+		background-image: url(../../../public/assets/home/mobile/image-speaker-zx7.jpg);
 		background-position: center;
 	}
 }
@@ -159,7 +159,7 @@
 
 .yx1-container figure {
 	flex-basis: 50%;
-	background-image: url(../../public/assets/home/desktop/image-earphones-yx1.jpg);
+	background-image: url(../../../public/assets/home/desktop/image-earphones-yx1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

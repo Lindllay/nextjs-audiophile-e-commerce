@@ -1,22 +1,20 @@
 // Media
 /*
-0 - 667px:      Phone
-668 - 900px:    Tablet portrait
+0 - 672px:      Phone
+672 - 900px:    Tablet portrait
 900 - 1100px:   Tablet landscape
 [1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
 
 $breakpoint arguement choices:
 - phone
 - tab-port
 - tab-land
-- big-desktop
 
 */
 
 @mixin respond($breakpoint) {
 	@if $breakpoint == mobile {
-		@media (max-width: 41.75em) {
+		@media (max-width: 42em) {
 			@content;
 		}
 	}

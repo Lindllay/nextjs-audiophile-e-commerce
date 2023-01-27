@@ -1,5 +1,5 @@
 import styles from "./_OthersItem.module.scss";
-import respond from "../../config";
+import respond from "../../data/config";
 import NavButton from "../UI/NavButton";
 
 const OthersItem = (props) => {

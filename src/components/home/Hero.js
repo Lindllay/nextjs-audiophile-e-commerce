@@ -1,7 +1,7 @@
 import styles from "./_Hero.module.scss";
 import Wrapper from "../../components/layout/Wrapper";
 import NavButton from "../UI/NavButton";
-import respond from "../../config";
+import respond from "../../data/config";
 
 const Hero = () => {
 	return (

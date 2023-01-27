@@ -1,6 +1,6 @@
 import styles from "./_ProductCategory.module.scss";
 import NavButton from "../UI/NavButton";
-import respond from "../../config";
+import respond from "../../data/config";
 
 const ProductCategory = (props) => {
 	const refractoredImgSrc = {

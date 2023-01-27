@@ -25,7 +25,7 @@ const CategoryPage = (props) => {
 };
 
 export async function getStaticProps(context) {
-	const filePath = path.join(process.cwd(), "data.json");
+	const filePath = path.join(process.cwd(), "/src/data/data.json");
 	const data = await fsPromises.readFile(filePath);
 	const objectData = JSON.parse(data);
 
