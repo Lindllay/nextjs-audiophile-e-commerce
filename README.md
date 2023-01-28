@@ -1,5 +1,6 @@
 <h1>Audiophile</h1>
 <h3>Multi-page e-commerce website</h3>
+<p>Live: https://nextjs-audiophile-e-commerce.vercel.app/</p>
 
 
 <h4>This project is my implementation of frontendmentor.io guru's level challenge. It's a typical e-commerce website, where users are able to:</h4>
