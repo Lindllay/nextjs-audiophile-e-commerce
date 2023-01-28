@@ -1,4 +1,4 @@
-import styles from "./RadioInput.module.css";
+import styles from "./_RadioInput.module.scss";
 
 const RadioInput = (props) => {
 	const classes = `${styles["form-control"]} ${props.className}`;

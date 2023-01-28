@@ -1,4 +1,4 @@
-import styles from "./CategoryHeader.module.css";
+import styles from "./_CategoryHeader.module.scss";
 
 const CategoryHeader = (props) => {
 	return (

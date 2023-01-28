@@ -1,4 +1,4 @@
-import styles from "./ListItem.module.css";
+import styles from "./_ListItem.module.scss";
 
 const ListItem = (props) => {
 	return (

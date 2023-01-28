@@ -1,8 +1,8 @@
-import styles from "./Navigation.module.css";
+import styles from "./_Navigation.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Navigation = (props) => {
+const Navigation = () => {
 	const router = useRouter();
 
 	return (

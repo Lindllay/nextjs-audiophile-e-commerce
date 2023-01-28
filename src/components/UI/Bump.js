@@ -1,4 +1,4 @@
-import styles from "./Bump.module.css";
+import styles from "./_Bump.module.scss";
 
 const Bump = (props) => {
 	const classes = `${styles.container} ${props.bump ? `${styles.bump}` : ""}`;

@@ -1,4 +1,4 @@
-import styles from "./TextInput.module.css";
+import styles from "./_TextInput.module.scss";
 
 const TextInput = (props) => {
 	const classes = `${styles["form-control"]} ${props.className}`;

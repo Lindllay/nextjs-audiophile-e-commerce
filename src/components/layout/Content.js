@@ -1,4 +1,4 @@
-import styles from "./Content.module.css";
+import styles from "./_Content.module.scss";
 import Wrapper from "./Wrapper";
 
 const Content = (props) => {

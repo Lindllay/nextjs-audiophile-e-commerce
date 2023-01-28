@@ -1,4 +1,4 @@
-import styles from "./CartIcon.module.css";
+import styles from "./_CartIcon.module.scss";
 import { useContext } from "react";
 import CartContext from "../store/cart-context";
 

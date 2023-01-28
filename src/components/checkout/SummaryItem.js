@@ -1,4 +1,4 @@
-import styles from "./SummaryItem.module.css";
+import styles from "./_SummaryItem.module.scss";
 
 const SummaryItem = (props) => {
 	return (

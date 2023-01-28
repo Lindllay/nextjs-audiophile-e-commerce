@@ -1,4 +1,4 @@
-import styles from "./CartItem.module.css";
+import styles from "./_CartItem.module.scss";
 import CounterButton from "../UI/CounterButton";
 
 const CartItem = (props) => {

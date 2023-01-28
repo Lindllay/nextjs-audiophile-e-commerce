@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CounterButton.module.css";
+import styles from "./_CounterButton.module.scss";
 
 const CounterButton = React.forwardRef((props, ref) => {
 	const classes = `${styles.box} ${props.className}`;
