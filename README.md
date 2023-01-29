@@ -21,7 +21,13 @@ Built with:
 
 <h2>Screenshots</h2>
 
-<a href="https://freeimage.host/i/H0tH6Yl"><img src="https://iili.io/H0tH6Yl.md.png" alt="H0tH6Yl.md.png" border="0" height="1000px"></a>&nbsp;
-<a href="https://freeimage.host/i/H0tdnVe"><img src="https://iili.io/H0tdnVe.md.png" alt="H0tdnVe.md.png" border="0" height="1000px"></a>&nbsp;
-<a href="https://freeimage.host/i/H0t308v"><img src="https://iili.io/H0t308v.md.png" alt="H0t308v.md.png" border="0" height="1000px"></a>
-<div><a href="https://freeimage.host/i/H0tFoiX"><img src="https://iili.io/H0tFoiX.md.png" alt="H0tFoiX.md.png" border="0" ></a>
+<div align="center">
+<h3>Homepage</h3>
+<a href="https://freeimage.host/i/H0tH6Yl"><img src="https://iili.io/H0tH6Yl.md.png" alt="H0tH6Yl.md.png" border="0" ></a><br>
+<h3>Category Page</h3>
+<a href="https://freeimage.host/i/H0tdnVe"><img src="https://iili.io/H0tdnVe.md.png" alt="H0tdnVe.md.png" border="0" ></a><br>
+<h3>Details Page</h3>
+<a href="https://freeimage.host/i/H0t308v"><img src="https://iili.io/H0t308v.md.png" alt="H0t308v.md.png" border="0" ></a><br>
+<h3>Checkout</h3>
+<a href="https://freeimage.host/i/H0tFoiX"><img src="https://iili.io/H0tFoiX.md.png" alt="H0tFoiX.md.png" border="0" ></a>
+</div>
